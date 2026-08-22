@@ -1,0 +1,117 @@
+/* Portafolio - Nordic (colores desde Figma Proyecto-Portafolio): fondos azulados oscuros + acento melocoton/terracota. Jerarquia por luminosidad. */
+
+:root {
+  /* === Canvas y Fondos === */
+  --bg-canvas: #0C0E10;
+  --bg-primary: #121416;
+  --bg-card: #1E2022;
+  --bg-card-hover: #282A2C;
+  --bg-surface-lowest: #0C0E10;
+  --bg-surface-low: #1A1C1E;
+  --bg-surface-highest: #333537;
+  --bg-bright: #37393B;
+
+  /* === Acento: melocoton / terracota === */
+  --accent: #F2BE8C;
+  --accent-light: #FFD6B0;
+  --accent-mid: #E29578;
+  --accent-strong: #2C1600;
+  --accent-strong-hover: #4A2A10;
+
+  /* === Acento con opacidad (halos / glows) === */
+  --accent-5: rgba(242, 190, 140, 0.05);
+  --accent-10: rgba(242, 190, 140, 0.10);
+  --accent-50: rgba(242, 190, 140, 0.50);
+
+  /* === Gradiente Hero (seccion Inicio, desde Figma) === */
+  --gradient-hero: linear-gradient(180deg, rgba(226, 149, 120, 0) 0%, rgba(226, 149, 120, 0.05) 50%, #121416 100%);
+
+  /* === Textos (crema / gris, jerarquia por luminosidad) === */
+  --text-primary: #D4C4B7;
+  --text-secondary: #E2E2E5;
+  --text-selected: #E29578;
+  --text-muted: #A8988A;
+  --text-disabled: #37393B;
+
+  /* === Bordes y Outlines === */
+  --border-color: #282A2C;
+  --border-strong: #37393B;
+  --outline-variant: #333537;
+
+  /* === Estados === */
+  --error: #FFB4AB;
+  --error-container: #44251D;
+  --on-error: #44251D;
+  --on-error-container: #FFB3C1;
+
+  /* === Sombras === */
+  --shadow-soft: 0 1px 3px rgba(0, 0, 0, 0.3);
+  --shadow-navbar: 0 4px 20px rgba(0, 0, 0, 0.25);
+
+  /* === Radios === */
+  --radius-sm: 0.25rem;
+  --radius-base: 0.5rem;
+  --radius-md: 0.75rem;
+  --radius-lg: 1rem;
+  --radius-xl: 1.5rem;
+  --radius-full: 9999px;
+
+  /* === Espaciado (base 8px) === */
+  --space-xs: 4px;
+  --space-base: 8px;
+  --space-sm: 12px;
+  --space-md: 24px;
+  --space-lg: 48px;
+  --space-xl: 80px;
+  --gutter: 24px;
+  --container-max: 1200px;
+
+  /* === Tipografia === */
+  --font-heading: 'Sora', 'Plus Jakarta Sans', sans-serif;
+  --font-body: 'Inter', sans-serif;
+  --font-label: 'Inter', sans-serif;
+  --font-code: 'JetBrains Mono', monospace;
+  --fs-display-xl: 72px;
+  --fs-display-lg: 56px;
+  --fs-headline-lg: 40px;
+  --fs-headline-md: 28px;
+  --fs-body-lg: 18px;
+  --fs-body-md: 16px;
+  --fs-label-md: 14px;
+  --fs-label-sm: 12px;
+  --fw-display-xl: 700;
+  --fw-display-lg: 600;
+  --fw-headline: 600;
+  --fw-body: 400;
+  --fw-label: 500;
+  --lh-display-xl: 1.05;
+  --lh-display-lg: 1.08;
+  --lh-headline: 1.2;
+  --lh-body: 1.7;
+
+  /* === Transiciones === */
+  --transition-base: 300ms ease-out;
+  --transition-fast: 150ms ease;
+  --transition-transform: 300ms ease-out;
+}
+
+/* Reset global */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}

@@ -1,0 +1,64 @@
+.hero{
+  width: 100%;
+  height: 666.38px;
+  padding: 100px 64px;
+  background: var(--gradient-hero);
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 32px;
+}
+
+.hero-top,
+.hero-mid,
+.hero-bot {
+  margin: 0;
+}
+
+.badge-hero{
+  width: max-content;
+  display: flex;
+  gap: 5px;
+  background-color: var(--bg-surface-low);
+  padding: 6px 12px;
+  border-radius: 20px;
+  border: 1px solid var(--border-color);
+  box-shadow: var(--shadow-soft);
+}
+
+.badge-hero i{
+  display: flex;
+  align-items: center;
+  font-size: 10px;
+  color: var(--accent);
+}
+
+.badge-text{
+  margin: 0;
+}
+
+.title{
+  margin: 0;
+  font-size: 48px;
+  font-weight: 100;
+}
+
+.title-accent{
+  color: var(--accent);
+}
+
+.hero-description{
+  margin: 20px 0 ;
+}
+
+.hero-mid p{
+  width: 650px;
+  margin: 0;
+}
+
+.hero-bot{
+  display: flex;
+  gap: 32px;
+  padding-top: 42px;
+}
