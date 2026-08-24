@@ -1,22 +1,27 @@
-.hero{
+.hero-section{
   width: 100%;
   height: 666.38px;
-  padding: 100px 64px;
+  padding: 80px 0;
   background: var(--gradient-hero);
   box-sizing: border-box;
+}
+
+.hero-container{
+  padding: 0 64px;
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 32px;
+  gap: 40px;
 }
 
-.hero-top,
-.hero-mid,
-.hero-bot {
+.hero-header,
+.hero-content,
+.hero-actions {
   margin: 0;
 }
 
-.badge-hero{
+.hero-badge{
   width: max-content;
   display: flex;
   gap: 5px;
@@ -27,24 +32,25 @@
   box-shadow: var(--shadow-soft);
 }
 
-.badge-hero i{
+.hero-badge-icon{
   display: flex;
   align-items: center;
   font-size: 10px;
   color: var(--accent);
 }
 
-.badge-text{
+.hero-badge-text{
   margin: 0;
 }
 
-.title{
+.hero-title{
   margin: 0;
-  font-size: 48px;
+  font-size: 52px;
   font-weight: 100;
+  color: var(--text-secondaryz);
 }
 
-.title-accent{
+.hero-title-accent{
   color: var(--accent);
 }
 
@@ -52,12 +58,12 @@
   margin: 20px 0 ;
 }
 
-.hero-mid p{
+.hero-content p{
   width: 650px;
   margin: 0;
 }
 
-.hero-bot{
+.hero-actions{
   display: flex;
   gap: 32px;
   padding-top: 42px;

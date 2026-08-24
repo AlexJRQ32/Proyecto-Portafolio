@@ -1,0 +1,64 @@
+.stack-card{
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  padding: 24px;
+  width: 270px;
+  height: max-content;
+  background-color: var(--bg-surface-low);
+  border: 2px solid var(--border-color);
+  border-radius: 2px;
+  box-shadow: var(--shadow-soft);
+  box-sizing: border-box;
+}
+
+.stack-card-header{
+  display: flex;
+  justify-content: space-between;
+}
+
+.stack-card-icon{
+  font-size: 24px;
+  color: var(--accent);
+}
+
+.stack-card-version{
+  display: flex;
+  align-items: center;
+}
+
+.stack-card-title{
+  color: var(--text-secondary);
+  padding: 10px 0;
+}
+
+.stack-card-description{
+  margin: 0;
+  color: var(--text-primary);
+}
+
+.stack-card-badges{
+  display: flex;
+  gap: 8px;
+  padding-top: 17px;
+}
+
+.stack-card-badge{
+  display: flex;
+  padding: 3px 8px;
+  border: 2px solid var(--border-color);
+  color: var(--text-secondary);
+  align-items: center;
+}
+
+.stack-card:hover{
+  transition: var(--transition-base);
+  transform: translateY(-3px);
+}
+
+/* Card destacada (architecture-section-v2): borde y sombra distintos al resto.
+   Aplicar con la clase "stack-card--featured" a la card que en Figma destaca. */
+.stack-card--featured{
+  border-color: var(--border-card-accent);
+  box-shadow: var(--shadow-card-accent);
+}

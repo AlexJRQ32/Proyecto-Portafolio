@@ -3,7 +3,7 @@ import './Footer.css'
 
 function Footer() {
   return (
-    <footer className='footer'>
+    <footer className='footer' id='footer'>
       <div className="footer-container">
         <section className="footer-brand">
           <strong className="footer-brand-name"><i className="footer-brand-icon fas fa-code"></i>Roble - Dev</strong>

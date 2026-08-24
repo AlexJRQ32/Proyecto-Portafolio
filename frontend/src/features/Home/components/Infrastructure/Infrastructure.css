@@ -1,0 +1,33 @@
+.infrastructure-section{
+  height: 597.45px;
+  background-color: var(--bg-canvas);
+  border-top: 2px solid var(--border-color);
+  border-bottom: 2px solid var(--border-color);
+  padding: 80px 0;
+}
+
+.infrastructure-label{
+  color: var(--text-selected);
+  font-size: 12px;
+}
+
+.infrastructure-header{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-bottom: 20px;
+  border-bottom: 2px solid var(--border-color);
+}
+
+.infrastructure-title{
+  font-weight: 100;
+  color: var(--text-secondary);
+  font-size: 48px;
+  margin: 0;
+}
+
+.infrastructure-grid{
+  display: flex;
+  gap: 24px;
+  justify-content: space-evenly;
+}

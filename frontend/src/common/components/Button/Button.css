@@ -26,3 +26,15 @@
   border: 2px solid var(--border-color);
   box-shadow: var(--shadow-soft);
 }
+
+.btn-grey:hover{
+  transition: var(--transition-base);
+  transform: translateY(-5px);
+  background-color: var(--border-color);
+}
+
+.btn-orange:hover{
+  transition: var(--transition-base);
+  transform: translateY(-5px);
+  background-color: var(--accent);
+}
