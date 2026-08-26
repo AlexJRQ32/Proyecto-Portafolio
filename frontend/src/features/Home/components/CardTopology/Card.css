@@ -1,0 +1,96 @@
+.topology-card{
+  width: 336px;
+  height: 380px;
+  background-color: var(--bg-surface-low);
+  border-radius: 10px;
+  border: 2px solid var(--border-color);
+  box-sizing: border-box;
+  padding: 32px;
+  box-shadow: var(--shadow-soft);
+}
+
+.topology-card-header{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.card-top{
+  display: flex;
+  justify-content: space-between;
+}
+
+.icon-square{
+  background-color: var(--bg-primary);
+  width: 72px;
+  height: 72px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid var(--border-color);
+  border-radius: 10px;
+}
+
+.icon-topology{
+  width: 32px;
+  height: 32px;
+  stroke-width: 1.5;
+  color: var(--text-secondary);
+}
+
+.layer{
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.card-mid{
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding-bottom: 20px;
+  border-bottom: 2px solid var(--border-color);
+  margin-bottom: 20px;
+}
+
+.title-card{
+  margin: 0;
+  color: var(--text-secondary);
+  font-size: 32px;
+}
+
+.topology-card-description{
+  margin: 0;
+  font-weight: 200;
+  line-height: 1.5;
+  font-size: 14px;
+}
+
+/* Card Core */
+
+.card-core{
+  border-color: var(--border-card-accent);
+  box-shadow: var(--shadow-card-accent);
+}
+
+.card-core .icon-square,
+.card-core .icon-topology,
+.card-core .layer{
+  color: var(--accent-mid);
+  border-color: var(--accent-mid);
+}
+
+.card-core .technologies{
+  color: var(--accent);
+}
+
+@media (max-width: 768px) {
+  .topology-card {
+    height: auto;
+    min-height: 380px;
+    padding: 24px;
+  }
+
+  .title-card {
+    font-size: 28px;
+  }
+}

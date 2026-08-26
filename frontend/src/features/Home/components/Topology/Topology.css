@@ -1,0 +1,22 @@
+.topology-grid{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container-icon{
+  padding-bottom: 8px;
+  border-bottom: 2px solid var(--border-color);
+  color: var(--accent-mid);
+}
+
+@media (max-width: 768px) {
+  .container-icon {
+    padding: 0;
+    border-bottom: 0;
+  }
+
+  .container-icon svg {
+    transform: rotate(90deg);
+  }
+}

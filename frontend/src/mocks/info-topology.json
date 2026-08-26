@@ -1,0 +1,26 @@
+[
+  {
+    "id": "client",
+    "icon": "monitor",
+    "layer": "CAPA_01",
+    "title": "Capa Cliente",
+    "technologies": "React + Vite",
+    "description": "Interfaz reactiva optimizada para el usuario final. Carga ultra rápida y renderizado híbrido para una experiencia impecable."
+  },
+  {
+    "id": "api",
+    "icon": "cable",
+    "layer": "CAPA_02 // CORE",
+    "title": "Pasarela API",
+    "technologies": "C# / .NET Core",
+    "description": "Orquestador centralizado de alto rendimiento. Enrutamiento, validación y middleware de comunicación asíncrona."
+  },
+  {
+    "id": "database",
+    "icon": "database",
+    "layer": "CAPA_03",
+    "title": "Capa de Datos",
+    "technologies": "SQL Server / Entity Framework",
+    "description": "Persistencia y caché distribuida de baja latencia. Consultas relacionales complejas y almacenamiento clave-valor en tiempo real."
+  }
+]

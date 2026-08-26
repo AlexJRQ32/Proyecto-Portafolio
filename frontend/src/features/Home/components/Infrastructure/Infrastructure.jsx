@@ -4,15 +4,15 @@ import "./Infrastructure.css"
 
 function Infrastructure() {
   return(
-    <section className="infrastructure-section">
-      <div className="hero-container infrastructure-container">
-        <header className="infrastructure-header">
-          <span className="infrastructure-label">01 // INFRAESTRUCTURA</span>
-          <h2 className="infrastructure-title">Stack Principal</h2>
+    <section className="section infrastructure-section">
+      <div className="section-container infrastructure-container">
+        <header className="section-header infrastructure-header">
+          <span className="section-label infrastructure-label">01 // INFRAESTRUCTURA</span>
+          <h2 className="section-title infrastructure-title">Stack Principal</h2>
         </header>
-        <footer className="infrastructure-grid">
+        <footer className="section-grid infrastructure-grid">
           {infoStack.map((stack) => (
-            <Card key={stack.icon} {...stack} />
+            <Card key={stack.id} {...stack} />
           ))}
         </footer>
       </div>

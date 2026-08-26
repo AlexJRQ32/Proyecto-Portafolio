@@ -1,5 +1,7 @@
 [
 	{
+		"id": "dotnet",
+    
 		"icon": "csharp",
 		"title": ".NET",
 		"version": ".NET 10.0.11",
@@ -8,6 +10,7 @@
 		"badge2": ".NET Core"
 	},
 	{
+		"id": "react-vite",
 		"icon": "react",
 		"title": "React + Vite",
 		"version": "React 19 / Vite 8",
@@ -16,6 +19,7 @@
 		"badge2": "Redux"
 	},
 	{
+		"id": "sql-server",
 		"icon": "database",
 		"title": "SQL Server",
 		"version": "SQL Server 2025 ",
@@ -24,6 +28,7 @@
 		"badge2": "ADO.NET"
 	},
 	{
+		"id": "git",
 		"icon": "git",
 		"title": "Git",
 		"version": "Git 2.55.0",

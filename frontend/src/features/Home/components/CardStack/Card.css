@@ -39,16 +39,19 @@
 
 .stack-card-badges{
   display: flex;
+  flex-wrap: wrap;
   gap: 8px;
   padding-top: 17px;
 }
 
 .stack-card-badge{
   display: flex;
-  padding: 3px 8px;
-  border: 2px solid var(--border-color);
+  padding: 3px 7px;
+  border: 1px solid var(--border-color);
   color: var(--text-secondary);
   align-items: center;
+  font-size: 14px;
+  white-space: nowrap;
 }
 
 .stack-card:hover{
@@ -61,4 +64,11 @@
 .stack-card--featured{
   border-color: var(--border-card-accent);
   box-shadow: var(--shadow-card-accent);
+}
+
+@media (max-width: 768px) {
+  .stack-card {
+    width: 100%;
+    max-width: 360px;
+  }
 }
