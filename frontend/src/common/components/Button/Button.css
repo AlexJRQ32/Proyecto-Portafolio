@@ -38,3 +38,19 @@
   transform: translateY(-5px);
   background-color: var(--accent);
 }
+
+@media (max-width: 768px) {
+  .btn-orange,
+  .btn-grey {
+    padding: 12px 22px;
+    font-size: 13px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .btn-orange,
+  .btn-grey {
+    transition: none;
+    transform: none;
+  }
+}
