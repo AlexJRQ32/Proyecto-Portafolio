@@ -1,0 +1,42 @@
+{
+  "cards": [
+    {
+      "icon": "monitor-smartphone",
+      "title": "Frontend React",
+      "description": "Interfaces con React 19, Next.js y TypeScript. De contadores de práctica a apps completas desplegadas."
+    },
+    {
+      "icon": "server",
+      "title": "Backend .NET",
+      "description": "APIs con ASP.NET Core, Entity Framework y autenticación JWT. Usados en e-commerce y OpenPawDevs."
+    },
+    {
+      "icon": "settings",
+      "title": "DevOps y Testing",
+      "description": "Azure DevOps con PRs revisados y boards de trabajo, 35 tests E2E con Playwright en FlowBank. Scrum y SDD."
+    },
+    {
+      "icon": "database",
+      "title": "Datos",
+      "description": "PostgreSQL con Supabase (RLS y auth) y SQL Server con Entity Framework. Migraciones versionadas."
+    }
+  ],
+  "timeline": [
+    {
+      "version": "v3.0.0 // 2026",
+      "title": "Full-Stack en Producción",
+      "badge": "EVIDENCIA: 35 TESTS E2E",
+      "description": "FlowBank en producción: Next.js + Supabase, auth dual, API de tipo de cambio del BCCR y suite completa de tests E2E con Playwright."
+    },
+    {
+      "version": "v2.0.0 // 2025",
+      "title": "Proyectos Full-Stack",
+      "description": "E-Commerce con .NET 10, React 19, PostgreSQL y JWT desplegado en Alwaysdata. OpenPawDevs gestionado con Azure DevOps Boards."
+    },
+    {
+      "version": "v1.0.0 // 2024",
+      "title": "Base Autodidacta",
+      "description": "Fundamentos de JavaScript, lógica y bases de datos con proyectos autodidactas. El inicio del camino hacia el desarrollo full-stack."
+    }
+  ]
+}

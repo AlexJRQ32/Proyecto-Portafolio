@@ -1,39 +1,38 @@
 [
 	{
 		"id": "dotnet",
-    
-		"icon": "csharp",
-		"title": ".NET",
-		"version": ".NET 10.0.11",
-		"description": ".NET es una plataforma de desarrollo de Microsoft para crear aplicaciones web, de escritorio, móviles y servicios.",
-		"badge1": "ASP.NET",
-		"badge2": ".NET Core"
+		"icon": "csharp-plain",
+		"title": ".NET 10",
+		"version": ".NET 10",
+		"description": "Mi stack backend principal: APIs con ASP.NET Core, Entity Framework y autenticación JWT.",
+		"badge1": "ASP.NET Core",
+		"badge2": "EF Core"
 	},
 	{
-		"id": "react-vite",
-		"icon": "react",
-		"title": "React + Vite",
-		"version": "React 19 / Vite 8",
-		"description": "React es una biblioteca de JavaScript para crear interfaces de usuario, mientras Vite ofrece un entorno de desarrollo rápido y ligero.",
-		"badge1": "Vite",
-		"badge2": "Redux"
+		"id": "react",
+		"icon": "react-original",
+		"title": "React 19 / Next.js",
+		"version": "v19.x",
+		"description": "Interfaces declarativas y apps completas con App Router. FlowBank y OpenFinances están construidas así.",
+		"badge1": "Next.js",
+		"badge2": "TypeScript"
 	},
 	{
-		"id": "sql-server",
-		"icon": "database",
-		"title": "SQL Server",
-		"version": "SQL Server 2025 ",
-		"description": "SQL Server es un sistema de gestión de bases de datos relacionales desarrollado por Microsoft.",
-		"badge1": "Entity Framework",
-		"badge2": "ADO.NET"
+		"id": "database",
+		"icon": "postgresql-plain",
+		"title": "PostgreSQL",
+		"version": "PostgreSQL",
+		"description": "Persistencia relacional: PostgreSQL con Supabase (RLS y auth) y SQL Server con Entity Framework.",
+		"badge1": "Supabase",
+		"badge2": "SQL Server"
 	},
 	{
 		"id": "git",
-		"icon": "git",
-		"title": "Git",
-		"version": "Git 2.55.0",
-		"description": "Git es un sistema de control de versiones distribuido para gestionar el historial y la colaboración en proyectos de software.",
-		"badge1": "GitHub",
-		"badge2": "GitLab"
+		"icon": "git-plain",
+		"title": "Git + Azure DevOps",
+		"version": "Git",
+		"description": "Control de versiones con ramas feature, PRs revisados y boards de trabajo en Azure DevOps.",
+		"badge1": "Azure DevOps",
+		"badge2": "GitHub"
 	}
 ]

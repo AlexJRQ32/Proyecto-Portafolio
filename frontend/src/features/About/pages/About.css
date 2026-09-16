@@ -1,0 +1,504 @@
+/* ============================================
+   ABOUT PAGE — Consistente con Home
+   Mismos tokens, misma estructura de sección
+   ============================================ */
+
+/* --- Sección completa (igual que .section de Home) --- */
+.about-section {
+  width: 100%;
+  background-color: var(--bg-canvas);
+  display: flex;
+  flex-direction: column;
+}
+
+/* --- Contenedor (igual que .section-container / .hero-container) --- */
+.about-container {
+  padding: 0 64px;
+}
+
+/* Primera sección (hero): más padding vertical */
+.about-container:first-child {
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+/* ============================================
+   1) HERO
+   ============================================ */
+.about-hero {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* Badge pill (idéntico a .hero-badge de Home) */
+.about-badge {
+  width: max-content;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  background-color: var(--bg-surface-low);
+  padding: 6px 12px;
+  border-radius: 20px;
+  border: 1px solid var(--border-color);
+  box-shadow: var(--shadow-soft);
+}
+
+.about-badge-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: var(--accent);
+  flex-shrink: 0;
+}
+
+.about-badge-text {
+  font-family: var(--font-label);
+  font-size: var(--fs-label-md);
+  font-weight: var(--fw-label);
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+/* Label estilo Home ("01 // INFRAESTRUCTURA") */
+.about-hero-label {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+.about-hero-label-line {
+  display: block;
+  width: 48px;
+  height: 2px;
+  background: var(--accent);
+  flex-shrink: 0;
+}
+
+.about-hero-label-text {
+  font-family: var(--font-label);
+  font-size: var(--fs-label-sm);
+  font-weight: var(--fw-label);
+  letter-spacing: 0.25em;
+  color: var(--text-selected);
+  text-transform: uppercase;
+}
+
+/* Título (mismo estilo que .hero-title de Home) */
+.about-title {
+  margin: 0;
+  font-family: var(--font-heading);
+  font-size: 52px;
+  font-weight: 100;
+  color: var(--text-secondary);
+  line-height: var(--lh-display-lg);
+}
+
+.about-title-accent {
+  color: var(--accent);
+}
+
+/* Descripción */
+.about-description {
+  margin: 0;
+  font-family: var(--font-body);
+  font-size: var(--fs-body-md);
+  line-height: var(--lh-body);
+  color: var(--text-primary);
+  max-width: 60ch;
+}
+
+/* ============================================
+   2) CONTENT ROW (code + cards)
+   ============================================ */
+.about-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--gutter);
+  align-items: start;
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+/* --- Code window (mismo estilo que .code-window de Home) --- */
+.about-code {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  background: var(--code-bg);
+  border-radius: var(--code-radius);
+  box-shadow: var(--code-shadow);
+  font-family: var(--code-font);
+  border: 2px solid var(--code-border);
+  font-size: var(--code-font-size);
+  line-height: var(--code-line-height);
+  padding: 16px;
+  box-sizing: border-box;
+  transition: transform var(--transition-base);
+  cursor: pointer;
+}
+
+.about-code:hover {
+  transform: translateY(-8px);
+}
+
+.about-code-top {
+  display: flex;
+  gap: 6px;
+}
+
+.about-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.about-dot--red {
+  background-color: var(--code-dot-close);
+}
+
+.about-dot--yellow {
+  background-color: var(--code-dot-minimize);
+}
+
+.about-dot--green {
+  background-color: var(--code-dot-maximize);
+}
+
+.about-code-body {
+  margin: 0;
+  overflow-x: auto;
+  white-space: pre;
+  color: var(--text-secondary);
+}
+
+/* --- Syntax highlighting --- */
+.code-kw {
+  color: var(--accent);
+}
+
+.code-var {
+  color: var(--accent-light);
+}
+
+.code-key {
+  color: #8FB8CE;
+}
+
+.code-str {
+  color: #A8C686;
+}
+
+.code-num {
+  color: var(--accent-mid);
+}
+
+.code-punc {
+  color: var(--text-muted);
+}
+
+.about-code-line {
+  width: max-content;
+  margin: 0;
+}
+
+.about-indent-1 {
+  padding-left: 16px;
+}
+
+.about-indent-2 {
+  padding-left: 48px;
+}
+
+/* --- Cards (estilo stack-card de Home) --- */
+.about-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--gutter);
+}
+
+.about-card {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  padding: 24px;
+  background-color: var(--bg-surface-low);
+  border: 2px solid var(--border-color);
+  border-radius: 2px;
+  box-shadow: var(--shadow-soft);
+  box-sizing: border-box;
+  transition: var(--transition-base);
+}
+
+.about-card:hover {
+  transform: translateY(-3px);
+}
+
+.about-card-header {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+.about-card-icon {
+  width: 24px;
+  height: 24px;
+  color: var(--accent);
+  flex-shrink: 0;
+}
+
+.about-card-title {
+  margin: 0;
+  font-family: var(--font-heading);
+  font-size: var(--fs-body-lg);
+  font-weight: var(--fw-headline);
+  color: var(--text-secondary);
+}
+
+.about-card-description {
+  margin: 0;
+  font-family: var(--font-body);
+  font-size: var(--fs-label-md);
+  line-height: 1.6;
+  color: var(--text-primary);
+}
+
+/* ============================================
+   3) TIMELINE
+   ============================================ */
+.about-timeline-section {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+  padding-top: 80px;
+  padding-bottom: 80px;
+  border-top: 2px solid var(--border-color);
+}
+
+/* Header estilo section-header de Home */
+.about-timeline-header {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-bottom: 20px;
+  border-bottom: 2px solid var(--border-color);
+}
+
+.about-section-label {
+  font-family: var(--font-label);
+  font-size: var(--fs-label-sm);
+  font-weight: var(--fw-label);
+  letter-spacing: 0.2em;
+  color: var(--text-selected);
+  text-transform: uppercase;
+}
+
+.about-timeline-header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: var(--space-md);
+}
+
+.about-section-title {
+  margin: 0;
+  font-family: var(--font-heading);
+  font-size: 48px;
+  font-weight: 100;
+  color: var(--text-secondary);
+}
+
+.about-timeline-meta {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: var(--space-xs);
+  font-family: var(--code-font);
+  flex-shrink: 0;
+}
+
+.about-timeline-meta-head {
+  font-size: var(--fs-label-sm);
+  font-weight: var(--fw-label);
+  color: var(--text-selected);
+  letter-spacing: 0.05em;
+}
+
+.about-timeline-meta-date {
+  font-size: var(--fs-label-sm);
+  color: var(--text-muted);
+}
+
+/* Track */
+.about-timeline-track {
+  display: flex;
+  flex-direction: column;
+}
+
+.about-timeline-entry {
+  display: grid;
+  grid-template-columns: 110px 24px 1fr;
+  gap: var(--space-md);
+  min-height: 140px;
+}
+
+.about-timeline-version {
+  font-family: var(--code-font);
+  font-size: var(--fs-label-sm);
+  color: var(--text-muted);
+  letter-spacing: 0.04em;
+  padding-top: var(--space-xs);
+  text-align: right;
+  white-space: nowrap;
+}
+
+/* Node + line */
+.about-timeline-node-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.about-timeline-node {
+  width: 12px;
+  height: 12px;
+  border-radius: var(--radius-full);
+  background: var(--accent);
+  box-shadow: 0 0 8px var(--accent-50);
+  flex-shrink: 0;
+  margin-top: var(--space-xs);
+  z-index: 1;
+}
+
+.about-timeline-line {
+  width: 2px;
+  flex: 1;
+  background: var(--border-color);
+}
+
+/* Card (estilo topology-card de Home) */
+.about-timeline-card {
+  background-color: var(--bg-surface-low);
+  border: 2px solid var(--border-color);
+  border-radius: var(--radius-base);
+  box-shadow: var(--shadow-soft);
+  padding: var(--space-md);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+  transition: var(--transition-base);
+}
+
+.about-timeline-card:hover {
+  transform: translateY(-3px);
+}
+
+.about-timeline-card-header {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  flex-wrap: wrap;
+}
+
+.about-timeline-card-title {
+  margin: 0;
+  font-family: var(--font-heading);
+  font-size: var(--fs-body-lg);
+  font-weight: var(--fw-headline);
+  color: var(--text-secondary);
+}
+
+/* Badge outline estilo stack-card-badge de Home */
+.about-timeline-badge {
+  font-family: var(--code-font);
+  font-size: var(--fs-label-sm);
+  font-weight: var(--fw-label);
+  letter-spacing: 0.08em;
+  color: var(--accent);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-full);
+  padding: 3px 10px;
+  white-space: nowrap;
+}
+
+.about-timeline-card-desc {
+  margin: 0;
+  font-family: var(--font-body);
+  font-size: var(--fs-body-md);
+  line-height: var(--lh-body);
+  color: var(--text-primary);
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+@media (max-width: 900px) {
+  .about-content {
+    grid-template-columns: 1fr;
+  }
+
+  .about-cards {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-container {
+    padding: 0 24px;
+  }
+
+  .about-container:first-child {
+    padding-top: 64px;
+    padding-bottom: 64px;
+  }
+
+  .about-title {
+    font-size: 40px;
+  }
+
+  .about-section-title {
+    font-size: 36px;
+  }
+
+  .about-content {
+    padding-top: 48px;
+    padding-bottom: 48px;
+  }
+
+  .about-timeline-section {
+    padding-top: 48px;
+    padding-bottom: 48px;
+  }
+
+  .about-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .about-timeline-entry {
+    grid-template-columns: 0px 20px 1fr;
+    gap: var(--space-sm);
+  }
+
+  .about-timeline-version {
+    text-align: left;
+  }
+
+  .about-timeline-header-row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .about-timeline-meta {
+    align-items: flex-start;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    transition: none !important;
+  }
+}

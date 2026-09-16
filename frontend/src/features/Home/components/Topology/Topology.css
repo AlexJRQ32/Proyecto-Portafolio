@@ -1,22 +1,132 @@
+.topology-header-row{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.topology-header-left{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.topology-meta-pill{
+  font-family: var(--font-code);
+  font-size: var(--fs-label-sm);
+  color: var(--text-muted);
+  white-space: nowrap;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-full);
+  padding: 4px 12px;
+}
+
 .topology-grid{
   display: flex;
+  align-items: stretch;
+  gap: 0;
+  padding-top: 40px;
   justify-content: center;
+}
+
+.topology-item{
+  display: flex;
   align-items: center;
 }
 
-.container-icon{
-  padding-bottom: 8px;
-  border-bottom: 2px solid var(--border-color);
-  color: var(--accent-mid);
+.topology-connector{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0 8px;
+  color: var(--accent);
+  flex-shrink: 0;
+}
+
+.topology-connector-arrow{
+  width: 20px;
+  height: 20px;
+  color: var(--accent);
+}
+
+.topology-connector-line{
+  width: 20px;
+  height: 2px;
+  background: var(--accent);
+  margin-top: 4px;
+}
+
+.topology-footer{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 32px;
+  border-top: 1px solid var(--border-color);
+  margin-top: 40px;
+}
+
+.topology-footer-left{
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-body);
+  font-size: var(--fs-label-sm);
+  color: var(--text-muted);
+}
+
+.topology-footer-dot{
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: var(--accent);
+  flex-shrink: 0;
+}
+
+.topology-footer-right{
+  font-family: var(--font-code);
+  font-size: var(--fs-label-sm);
+  color: var(--text-muted);
+}
+
+@media (max-width: 1024px) {
+  .topology-grid {
+    gap: 0;
+  }
+
+  .topology-connector {
+    padding: 0 4px;
+  }
 }
 
 @media (max-width: 768px) {
-  .container-icon {
-    padding: 0;
-    border-bottom: 0;
+  .topology-header-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
   }
 
-  .container-icon svg {
+  .topology-meta-pill {
+    white-space: normal;
+  }
+
+  .topology-grid {
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+  }
+
+  .topology-item {
+    flex-direction: column;
+  }
+
+  .topology-connector {
     transform: rotate(90deg);
+    padding: 8px 0;
+  }
+
+  .topology-footer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
   }
 }

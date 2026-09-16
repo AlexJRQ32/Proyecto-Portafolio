@@ -10,6 +10,8 @@
   --bg-surface-low: #1A1C1E;
   --bg-surface-highest: #333537;
   --bg-bright: #37393B;
+  --bg-hero-home: #121416;
+  --bg-hero-about: #121416;
 
   /* === Acento: melocoton / terracota === */
   --accent: #F2BE8C;
@@ -130,6 +132,14 @@ body {
   color: var(--text-primary);
   font-family: var(--font-body);
   -webkit-font-smoothing: antialiased;
+}
+
+body :where(div, main, section, article, aside, header, footer, nav, ul, ol, li, h1, h2, h3, h4, h5, h6, p, span, strong, small, label, a, button) {
+  cursor: pointer;
+}
+
+body :where(input, textarea, select) {
+  cursor: auto;
 }
 
 .section {

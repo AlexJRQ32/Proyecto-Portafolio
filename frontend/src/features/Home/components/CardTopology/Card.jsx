@@ -1,8 +1,16 @@
 import "./Card.css"
 
-function Card({ id, icon, layer, title, technologies, description }) {
+function Card({ id, icon, layer, title, technologies, description, featured }) {
   const cardClassName = `topology-card ${
-    id === "api" ? "card-core" : ""
+    featured ? "card-core" : ""
+  }`
+
+  const layerClassName = `layer ${
+    featured ? "layer-core" : ""
+  }`
+
+  const techClassName = `technologies ${
+    featured ? "technologies-core" : ""
   }`
 
   return(
@@ -10,13 +18,13 @@ function Card({ id, icon, layer, title, technologies, description }) {
       <header className="topology-card-header">
         <div className="card-top">
           <div className="icon-square">
-            <i className="icon-topology" data-lucide={icon}></i>
+            <i data-lucide={icon} className="icon-topology"></i>
           </div>
-          <span className="layer">{layer}</span>
+          <span className={layerClassName}>{layer}</span>
         </div>
         <div className="card-mid">
           <h2 className="title-card">{title}</h2>
-          <span className="technologies">{technologies}</span>
+          <span className={techClassName}>{technologies}</span>
         </div>
       </header>
       <footer className="topology-card-footer">

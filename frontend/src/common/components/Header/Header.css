@@ -6,6 +6,7 @@
   justify-content: center;
   font-family: var(--font-heading);
   box-shadow: var(--shadow-navbar);
+  border-bottom: 2px solid var(--border-color);
   position: fixed;
   top: 0;
   z-index: 1000;
@@ -22,12 +23,21 @@
 .header-logo{
   display: flex;
   gap: 5px;
+  align-items: center;
+}
+
+.header-logo-icon{
+  width: 16px;
+  height: 16px;
+  color: var(--accent);
+  flex-shrink: 0;
 }
 
 .header-nav, .header-nav-list, .header-nav-item, .header-nav-link{
   list-style: none;
   color: var(--text-primary);
   text-decoration: none;
+  padding: 16px 0;
 }
 
 .header-nav-link-icon{
@@ -39,15 +49,18 @@
   display: flex;
   gap: 15px;
   padding: 0;
+  margin: 0;
 }
 
 .header-nav-link.active{
-  color: var(--text-selected);
+  color: var(--accent);
+  border-bottom: 2px solid var(--accent);
 }
 
 .header-nav-link:hover {
   transition: var(--transition-base);
-  color: var(--text-selected);
+  color: var(--accent);
+  border-bottom: 2px solid var(--accent);
 }
 
 .header-btn{
@@ -57,6 +70,43 @@
   padding: 6px 12px;
   font-family: var(--font-heading);
   font-size: 0.75rem;
+}
+
+.header-btn:hover{
+  background-color: var(--bg-card-hover);
+  transition: var(--transition-base);
+  border: 2px solid var(--border-color);
+}
+
+.header-actions{
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.header-lang-toggle{
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  background: none;
+  border: 1px solid var(--border-color);
+  padding: 4px 10px;
+  border-radius: 4px;
+  color: var(--text-muted);
+  font-family: var(--font-code);
+  font-size: 0.7rem;
+  cursor: pointer;
+  transition: var(--transition-base);
+}
+
+.header-lang-toggle:hover{
+  color: var(--accent);
+  border-color: var(--accent);
+}
+
+.header-lang-icon{
+  width: 14px;
+  height: 14px;
 }
 
 /* ===== Responsive: pantallas pequeñas (móviles) ===== */
@@ -84,6 +134,15 @@
   .header-nav-link{
     font-size: 0.8rem;
     white-space: nowrap;
+  }
+
+  .header-actions{
+    gap: 4px;
+  }
+
+  .header-lang-toggle{
+    font-size: 0.65rem;
+    padding: 3px 6px;
   }
 
   .header-btn{

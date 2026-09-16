@@ -3,18 +3,19 @@
   flex-direction: column;
   gap: 7px;
   padding: 24px;
-  width: 270px;
   height: max-content;
   background-color: var(--bg-surface-low);
   border: 2px solid var(--border-color);
   border-radius: 2px;
   box-shadow: var(--shadow-soft);
   box-sizing: border-box;
+  transition: var(--transition-base);
 }
 
 .stack-card-header{
   display: flex;
   justify-content: space-between;
+  align-items: flex-start;
 }
 
 .stack-card-icon{
@@ -25,15 +26,25 @@
 .stack-card-version{
   display: flex;
   align-items: center;
+  font-family: var(--font-code);
+  font-size: var(--fs-label-sm);
+  color: var(--text-muted);
 }
 
 .stack-card-title{
+  margin: 0;
+  font-family: var(--font-heading);
+  font-size: var(--fs-body-lg);
+  font-weight: var(--fw-headline);
   color: var(--text-secondary);
-  padding: 10px 0;
+  padding: 10px 0 0;
 }
 
 .stack-card-description{
   margin: 0;
+  font-family: var(--font-body);
+  font-size: var(--fs-label-md);
+  line-height: 1.6;
   color: var(--text-primary);
 }
 
@@ -50,25 +61,28 @@
   border: 1px solid var(--border-color);
   color: var(--text-secondary);
   align-items: center;
-  font-size: 14px;
+  font-family: var(--font-code);
+  font-size: var(--fs-label-sm);
   white-space: nowrap;
 }
 
 .stack-card:hover{
-  transition: var(--transition-base);
   transform: translateY(-3px);
 }
 
-/* Card destacada (architecture-section-v2): borde y sombra distintos al resto.
-   Aplicar con la clase "stack-card--featured" a la card que en Figma destaca. */
 .stack-card--featured{
   border-color: var(--border-card-accent);
   box-shadow: var(--shadow-card-accent);
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .stack-card {
     width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .stack-card {
     max-width: 360px;
   }
 }

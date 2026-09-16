@@ -1,0 +1,215 @@
+{
+  "home": {
+    "hero": {
+      "badge": "ALEX ROBLERO // FULL-STACK DEV",
+      "title": "Scalable",
+      "titleAccent": "Engineering",
+      "titleSuffix": "of Solutions",
+      "description": "I'm Alex Roblero, a Systems Engineering student and self-taught full-stack developer. I don't sell promises: I build real software and leave it open for you to verify — production-deployed applications, 35 passing E2E tests, and professional workflow with Azure DevOps, Scrum, and PR reviews. Every project is evidence that I learn by building.",
+      "ctaPrimary": "VIEW PROJECTS",
+      "ctaSecondary": "DOWNLOAD CV"
+    },
+    "infrastructure": {
+      "label": "01 // INFRASTRUCTURE",
+      "title": "Core Stack",
+      "meta": "Ecosystem: 4_stable_cores",
+      "cards": [
+        {
+          "id": "dotnet",
+          "title": ".NET 10",
+          "description": "My main backend stack: APIs with ASP.NET Core, Entity Framework and JWT authentication.",
+          "badge1": "ASP.NET Core",
+          "badge2": "EF Core"
+        },
+        {
+          "id": "react",
+          "title": "React 19 / Next.js",
+          "description": "Declarative interfaces and full apps with App Router. FlowBank and OpenFinances are built this way.",
+          "badge1": "Next.js",
+          "badge2": "TypeScript"
+        },
+        {
+          "id": "database",
+          "title": "PostgreSQL",
+          "description": "Relational persistence: PostgreSQL with Supabase (RLS and auth) and SQL Server with Entity Framework.",
+          "badge1": "Supabase",
+          "badge2": "SQL Server"
+        },
+        {
+          "id": "git",
+          "title": "Git + Azure DevOps",
+          "description": "Version control with feature branches, reviewed PRs and work boards in Azure DevOps.",
+          "badge1": "Azure DevOps",
+          "badge2": "GitHub"
+        }
+      ]
+    },
+    "topology": {
+      "label": "02 // TOPOLOGY",
+      "title": "System Architecture",
+      "metaPill": "View: general_schematic_vision",
+      "footerLatency": "Estimated latency between layers: < 15ms",
+      "footerStatus": "STATUS: NOMINAL_OPERATION",
+      "layers": [
+        {
+          "id": "client",
+          "layer": "LAYER_01",
+          "title": "Client Layer",
+          "technologies": "React / Next.js",
+          "description": "Reactive interface optimized for the end user. Ultra-fast loading and hybrid rendering for an impeccable experience."
+        },
+        {
+          "id": "api",
+          "layer": "LAYER_02 // CORE",
+          "title": "API Gateway",
+          "technologies": "ASP.NET Core + JWT",
+          "description": "Centralized high-performance orchestrator. Routing, validation and asynchronous communication middleware."
+        },
+        {
+          "id": "database",
+          "layer": "LAYER_03",
+          "title": "Data Layer",
+          "technologies": "PostgreSQL / SQL Server",
+          "description": "Low-latency distributed persistence and caching. Complex relational queries and real-time key-value storage."
+        }
+      ]
+    }
+  },
+  "about": {
+    "badge": "Full-Stack Developer",
+    "heroLabel": "PHILOSOPHY // ENGINEERING",
+    "title": "Engineering of",
+    "titleAccent": "Deterministic",
+    "titleSuffix": "Systems.",
+    "description": "I study engineering and build real software to prove it: personal banking with E2E tests, production-deployed e-commerce, and APIs with external integrations. No work experience yet, but with projects that are tested, deployed, and maintained.",
+    "code": {
+      "codeLabel": "Code snippet",
+      "nombre": "name",
+      "nombreValue": "Alex Roblero",
+      "rol": "role",
+      "rolValue": "Full-Stack Developer",
+      "enfoque": "approach",
+      "enfoqueValue": "Learning by building",
+      "proyectos_reales": "real_projects",
+      "islavic_landing": "islavic_landing",
+      "islavicValue": "React + Vite",
+      "openfinances": "openfinances",
+      "openfinancesValue": "Next.js + Supabase",
+      "openpaw": "openpaw",
+      "openpawValue": "ASP.NET Core + React",
+      "tests_e2e": "tests_e2e",
+      "principio": "principle",
+      "principioValue": "If it's not tested, it's not ready"
+    },
+    "cards": [
+      {
+        "title": "Frontend React",
+        "description": "Interfaces with React 19, Next.js and TypeScript. From practice counters to fully deployed apps."
+      },
+      {
+        "title": "Backend .NET",
+        "description": "APIs with ASP.NET Core, Entity Framework and JWT authentication. Used in e-commerce and OpenPawDevs."
+      },
+      {
+        "title": "DevOps & Testing",
+        "description": "Azure DevOps with reviewed PRs and work boards, 35 E2E tests with Playwright on FlowBank. Scrum and SDD."
+      },
+      {
+        "title": "Data",
+        "description": "PostgreSQL with Supabase (RLS and auth) and SQL Server with Entity Framework. Versioned migrations."
+      }
+    ],
+    "timelineLabel": "COMMIT HISTORY",
+    "timelineTitle": "System Evolution",
+    "timelineMetaHead": "HEAD → main",
+    "timelineMetaDate": "Updated: 19/09/2026",
+    "timelineEntries": [
+      {
+        "version": "v3.0.0 // 2026",
+        "title": "Full-Stack in Production",
+        "badge": "EVIDENCE: 35 E2E TESTS",
+        "description": "FlowBank in production: Next.js + Supabase, dual auth, BCCR exchange rate API and full E2E test suite with Playwright."
+      },
+      {
+        "version": "v2.0.0 // 2025",
+        "title": "Full-Stack Projects",
+        "description": "E-Commerce with .NET 10, React 19, PostgreSQL and JWT deployed on Alwaysdata. OpenPawDevs managed with Azure DevOps Boards."
+      },
+      {
+        "version": "v1.0.0 // 2024",
+        "title": "Self-Taught Foundation",
+        "description": "JavaScript fundamentals, logic and databases with self-taught projects. The beginning of the path toward full-stack development."
+      }
+    ]
+  },
+  "contact": {
+    "label": "contact_protocol/inquiry",
+    "title": "Contact.",
+    "form": {
+      "directMessage": "DIRECT MESSAGE",
+      "tipoLabel": "INQUIRY TYPE",
+      "tipoOptions": [
+        { "value": "General Inquiry", "label": "General Inquiry" },
+        { "value": "Job Opportunity", "label": "Job Opportunity" },
+        { "value": "Project Collaboration", "label": "Project Collaboration" }
+      ],
+      "nombreLabel": "YOUR NAME / ORGANIZATION",
+      "nombrePlaceholder": "Alex Roblero",
+      "correoLabel": "EMAIL ADDRESS",
+      "correoPlaceholder": "maria@example.com",
+      "mensajeLabel": "MESSAGE",
+      "mensajePlaceholder": "How can I help you today?",
+      "status": "Status: READY",
+      "submit": "SEND MESSAGE",
+      "sending": "Sending...",
+      "success": "Message sent successfully!",
+      "error": "Something went wrong. Please try again."
+    },
+    "emailPreview": {
+      "label": "PREVIEW",
+      "to": "To:",
+      "from": "From:",
+      "subject": "Subject:",
+      "bodyPlaceholder": "Write your message in the form and it will appear here..."
+    },
+    "connect": {
+      "label": "CONNECT",
+      "github": "GitHub",
+      "githubUrl": "github.com/alexjrq32",
+      "linkedin": "LinkedIn",
+      "linkedinUrl": "linkedin.com/in/alex-roblero-297811301"
+    }
+  },
+  "projects": {
+    "label": "/ PROJECT ARCHIVE /",
+    "titleLine1": "Deployed Systems",
+    "titleLine2": "and Architectural Prototypes",
+    "description": "A selection of production-deployed applications and interface prototypes. Each project includes its stack, deployment status and test evidence",
+    "viewRepo": "VIEW REPO",
+    "prevAria": "Previous project",
+    "nextAria": "Next project",
+    "dotsAria": "Projects",
+    "viewProjectAria": "View project"
+  },
+  "header": {
+    "navHome": "Home",
+    "navProjects": "Projects",
+    "navAbout": "About",
+    "navContact": "Contact",
+    "moreContacts": "More Contact",
+    "ariaToggle": "Switch to English"
+  },
+  "footer": {
+    "brandDescription": "Developer passionate about creating modern and functional web experiences.",
+    "navHeading": "Navigation",
+    "navHome": "Home",
+    "navProjects": "Projects",
+    "navAbout": "About",
+    "navContact": "Contact",
+    "socialHeading": "Social",
+    "github": "GitHub",
+    "linkedin": "LinkedIn",
+    "email": "Email",
+    "copyright": "All rights reserved."
+  }
+}
