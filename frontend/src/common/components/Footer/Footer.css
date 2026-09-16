@@ -139,6 +139,10 @@
 /* ===== Responsive ===== */
 
 @media (max-width: 768px) {
+  .footer {
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+
   .footer-container {
     grid-template-columns: 1fr;
     gap: var(--space-md);
@@ -161,6 +165,19 @@
 
   .footer-heading {
     text-align: center;
+  }
+
+  .footer-link {
+    min-height: 44px;
+    align-items: center;
+  }
+
+  .footer-social-icon {
+    min-width: 44px;
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 }
 

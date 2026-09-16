@@ -117,6 +117,7 @@
 @media (max-width: 768px) {
   .not-found {
     padding: var(--space-lg) var(--space-md);
+    padding-bottom: calc(var(--space-lg) + env(safe-area-inset-bottom));
   }
 
   .not-found-card {
@@ -125,5 +126,9 @@
 
   .not-found-title {
     font-size: var(--fs-headline-md);
+  }
+
+  .not-found-cta {
+    min-height: 44px;
   }
 }

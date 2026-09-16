@@ -320,6 +320,8 @@
 @media (max-width: 900px) {
   .header-menu-toggle {
     display: flex;
+    min-width: 44px;
+    min-height: 44px;
   }
 
   .header-nav {
@@ -328,6 +330,13 @@
 
   .header-actions {
     display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    height: calc(50px + env(safe-area-inset-top));
+    padding-top: env(safe-area-inset-top);
   }
 }
 
@@ -342,9 +351,14 @@
   }
 
   .header-mobile-menu {
-    top: calc(50px + 4px);
+    top: calc(50px + env(safe-area-inset-top) + 4px);
     right: 8px;
     width: calc(100% - 16px);
+  }
+
+  .header-mobile-link,
+  .header-mobile-lang {
+    min-height: 44px;
   }
 }
 

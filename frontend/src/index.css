@@ -132,6 +132,16 @@ body {
   color: var(--text-primary);
   font-family: var(--font-body);
   -webkit-font-smoothing: antialiased;
+  overscroll-behavior: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+@media (max-width: 768px) {
+  body {
+    font-size: 15px;
+    padding-top: env(safe-area-inset-top);
+    padding-bottom: env(safe-area-inset-bottom);
+  }
 }
 
 body :where(div, main, section, article, aside, header, footer, nav, ul, ol, li, h1, h2, h3, h4, h5, h6, p, span, strong, small, label, a, button) {
@@ -209,4 +219,11 @@ body :where(input, textarea, select) {
 h1{
   margin: 0;
   font-weight: 200;
+}
+
+/* === Touch feedback for mobile === */
+@media (hover: none) and (pointer: coarse) {
+  a, button {
+    -webkit-tap-highlight-color: transparent;
+  }
 }

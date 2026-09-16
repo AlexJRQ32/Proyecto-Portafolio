@@ -483,6 +483,8 @@
 
   .about-timeline-version {
     text-align: left;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 
   .about-timeline-header-row {
@@ -492,6 +494,27 @@
 
   .about-timeline-meta {
     align-items: flex-start;
+  }
+
+  /* Fix: prevent code block from causing horizontal overflow */
+  .about-code {
+    overflow: hidden;
+  }
+
+  .about-code-body {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  /* Fix: timeline cards should not overflow */
+  .about-timeline-card {
+    overflow: hidden;
+    word-break: break-word;
+  }
+
+  /* Fix: ensure about-page doesn't overflow */
+  .about-section {
+    overflow: hidden;
   }
 }
 

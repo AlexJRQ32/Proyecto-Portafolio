@@ -465,11 +465,29 @@
   .device--monitor {
     max-width: 100%;
   }
+
+  /* Breathing room for arrows and URL */
+  .carousel-arrow {
+    width: 44px;
+    height: 44px;
+  }
+
+  .device-monitor-bar {
+    padding: 8px 12px;
+  }
+
+  .device-monitor-url {
+    font-size: 10px;
+  }
 }
 
 @media (max-width: 600px) {
   .projects-title {
     font-size: 2rem;
+  }
+
+  .carousel-viewport {
+    gap: 8px;
   }
 
   .carousel-arrow {
@@ -502,6 +520,45 @@
 
   .project-buttons {
     gap: 12px;
+  }
+
+  .project-button {
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+  }
+
+  .carousel-dot {
+    min-width: 44px;
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: auto;
+    height: auto;
+    padding: 8px;
+  }
+
+  .carousel-dot::after {
+    content: '';
+    width: 8px;
+    height: 8px;
+    border-radius: var(--radius-full);
+    border: 1px solid var(--border-color);
+    background: transparent;
+  }
+
+  .carousel-dot--active::after {
+    background-color: var(--accent);
+    border-color: var(--accent);
+  }
+
+  .carousel-arrow {
+    opacity: 0.5;
+  }
+
+  .carousel-arrow:active {
+    opacity: 1;
   }
 }
 

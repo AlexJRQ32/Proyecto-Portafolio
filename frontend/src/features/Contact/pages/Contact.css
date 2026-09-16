@@ -666,6 +666,35 @@
 
   .contact-submit {
     justify-content: center;
+    min-height: 44px;
+  }
+
+  /* iOS zoom prevention: font-size >= 16px on inputs */
+  .contact-input,
+  .contact-select,
+  .contact-textarea {
+    font-size: 16px;
+    min-height: 44px;
+    padding: 10px 12px;
+  }
+
+  .contact-textarea {
+    min-height: 80px;
+  }
+
+  /* Tap targets */
+  .contact-field-label {
+    min-height: 44px;
+    align-items: center;
+  }
+
+  .contact-link-row {
+    min-height: 44px;
+  }
+
+  .contact-link-icon-box {
+    min-width: 44px;
+    min-height: 44px;
   }
 }
 
