@@ -19,7 +19,7 @@ function App() {
   const isKnownRoute = knownRoutes.some((r) => pathname === r || pathname.startsWith(`${r}/`))
 
   return (
-    <div className='app'>
+    <div className={isKnownRoute ? 'app' : 'app app--bare'}>
       {isKnownRoute && <Header />}
       <main className='app-content'>
         <Routes>
