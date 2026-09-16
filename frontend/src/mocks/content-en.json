@@ -117,6 +117,10 @@
       {
         "title": "Data",
         "description": "PostgreSQL with Supabase (RLS and auth) and SQL Server with Entity Framework. Versioned migrations."
+      },
+      {
+        "title": "AI-Driven Development",
+        "description": "My own agentic workflow: an orchestrator coordinates specialized subagents (planning, code, design, QA, security). Specs before code with SDD, quality audits on every delivery, and persistent memory across sessions."
       }
     ],
     "timelineLabel": "COMMIT HISTORY",

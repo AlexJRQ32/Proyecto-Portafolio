@@ -19,6 +19,11 @@
       "icon": "database",
       "title": "Datos",
       "description": "PostgreSQL con Supabase (RLS y auth) y SQL Server con Entity Framework. Migraciones versionadas."
+    },
+    {
+      "icon": "bot",
+      "title": "Desarrollo con IA",
+      "description": "Workflow agéntico propio: un orquestador coordina subagentes especializados (planificación, código, diseño, QA, seguridad). Specs antes de código con SDD, auditoría de calidad en cada entrega y memoria persistente entre sesiones."
     }
   ],
   "timeline": [
