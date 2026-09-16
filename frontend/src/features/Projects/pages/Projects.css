@@ -519,7 +519,8 @@
   }
 
   .project-buttons {
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
     gap: 10px;
   }
 
@@ -527,7 +528,7 @@
     justify-content: center;
     min-height: 44px;
     padding: 10px 16px;
-    width: 100%;
+    width: auto;
   }
 
   .project-button--case {
