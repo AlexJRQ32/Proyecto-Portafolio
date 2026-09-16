@@ -116,8 +116,8 @@
 /* --- Responsive --- */
 @media (max-width: 768px) {
   .not-found {
-    padding: var(--space-lg) var(--space-md);
-    padding-bottom: calc(var(--space-lg) + env(safe-area-inset-bottom));
+    padding: 72px var(--space-md) 48px;
+    padding-bottom: calc(var(--space-md) + env(safe-area-inset-bottom));
   }
 
   .not-found-card {
@@ -130,5 +130,7 @@
 
   .not-found-cta {
     min-height: 44px;
+    width: 100%;
+    justify-content: center;
   }
 }

@@ -438,53 +438,87 @@
   .about-content {
     grid-template-columns: 1fr;
   }
-
-  .about-cards {
-    grid-template-columns: 1fr 1fr;
-  }
 }
 
+/* ============================================
+   MOBILE (<=768px) — App-native layout
+   ============================================ */
 @media (max-width: 768px) {
   .about-container {
-    padding: 0 24px;
+    padding: 0 20px;
   }
 
   .about-container:first-child {
-    padding-top: 64px;
-    padding-bottom: 64px;
+    padding-top: 56px;
+    padding-bottom: 40px;
   }
 
   .about-title {
-    font-size: 40px;
+    font-size: 1.75rem;
   }
 
   .about-section-title {
-    font-size: 36px;
+    font-size: 1.5rem;
   }
 
   .about-content {
-    padding-top: 48px;
-    padding-bottom: 48px;
+    padding-top: 32px;
+    padding-bottom: 32px;
   }
 
-  .about-timeline-section {
-    padding-top: 48px;
-    padding-bottom: 48px;
+  /* Code block: compact with internal scroll */
+  .about-code {
+    overflow: hidden;
+    max-height: 220px;
   }
 
+  .about-code-body {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  /* Cards: single column, compact */
   .about-cards {
     grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .about-card {
+    padding: 16px;
+    gap: 4px;
+  }
+
+  /* Timeline: compact */
+  .about-timeline-section {
+    padding-top: 32px;
+    padding-bottom: 32px;
   }
 
   .about-timeline-entry {
     grid-template-columns: 0px 20px 1fr;
     gap: var(--space-sm);
+    min-height: auto;
   }
 
   .about-timeline-version {
     text-align: left;
     overflow: hidden;
     text-overflow: ellipsis;
+    display: none;
+  }
+
+  .about-timeline-card {
+    padding: 16px;
+    overflow: hidden;
+    word-break: break-word;
+  }
+
+  .about-timeline-card-title {
+    font-size: var(--fs-body-md);
+  }
+
+  .about-timeline-card-desc {
+    font-size: var(--fs-label-md);
   }
 
   .about-timeline-header-row {
@@ -496,7 +530,11 @@
     align-items: flex-start;
   }
 
-  /* Fix: prevent code block from causing horizontal overflow */
+  /* Prevent horizontal overflow */
+  .about-section {
+    overflow: hidden;
+  }
+
   .about-code {
     overflow: hidden;
   }
@@ -504,17 +542,6 @@
   .about-code-body {
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
-  }
-
-  /* Fix: timeline cards should not overflow */
-  .about-timeline-card {
-    overflow: hidden;
-    word-break: break-word;
-  }
-
-  /* Fix: ensure about-page doesn't overflow */
-  .about-section {
-    overflow: hidden;
   }
 }
 

@@ -362,31 +362,79 @@
   }
 }
 
+/* ============================================
+   MOBILE (<=768px) — App-native reading
+   ============================================ */
 @media (max-width: 768px) {
   .case-study-page {
-    padding: calc(80px + env(safe-area-inset-top)) 16px 60px;
+    padding: 72px 20px 48px;
   }
 
+  .case-study-header {
+    margin-bottom: 32px;
+    gap: 10px;
+  }
+
+  .case-study-title {
+    font-size: clamp(1.5rem, 5vw, 1.75rem);
+  }
+
+  /* Hero device: compact */
   .case-study-hero {
-    margin-bottom: 40px;
+    margin-bottom: 32px;
   }
 
   .case-study-hero--phone {
-    max-width: 220px;
+    max-width: 180px;
+    border-width: 2px;
+  }
+
+  .case-study-hero--phone .case-study-hero-img {
+    border-radius: 28px;
   }
 
   .case-study-hero--monitor {
     max-width: 100%;
+    border-width: 2px;
   }
 
+  /* Sections: tighter spacing */
   .case-study-section {
-    margin-bottom: 40px;
+    margin-bottom: 32px;
+  }
+
+  .case-study-section-title {
+    font-size: var(--fs-body-lg);
+  }
+
+  .case-study-decision {
+    padding: 16px;
+  }
+
+  .case-study-decision-title {
+    font-size: var(--fs-body-md);
+  }
+
+  .case-study-stack-layer {
+    flex: 0 0 100px;
+    padding: 10px 12px;
+    font-size: 11px;
+  }
+
+  .case-study-stack-tech {
+    padding: 10px 12px;
+  }
+
+  .case-study-cta {
+    margin-top: 32px;
+    padding-top: 32px;
   }
 
   .case-study-back {
     min-height: 44px;
     display: inline-flex;
     align-items: center;
+    margin-bottom: 24px;
   }
 }
 

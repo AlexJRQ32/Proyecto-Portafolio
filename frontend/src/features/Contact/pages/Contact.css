@@ -611,10 +611,6 @@
     grid-template-columns: 1fr;
   }
 
-  .contact-sidebar {
-    order: -1;
-  }
-
   .contact-form-card,
   .contact-sidebar {
     height: auto;
@@ -627,9 +623,12 @@
   }
 }
 
+/* ============================================
+   MOBILE (<=768px) — App-native layout
+   ============================================ */
 @media (max-width: 768px) {
   .contact-container {
-    padding: 0 24px;
+    padding: 0 20px;
   }
 
   .contact-container:first-child {
@@ -644,6 +643,7 @@
   .contact-grid {
     padding-top: 1rem;
     padding-bottom: 1rem;
+    gap: 20px;
   }
 
   .contact-form-card {
@@ -669,7 +669,6 @@
     min-height: 44px;
   }
 
-  /* iOS zoom prevention: font-size >= 16px on inputs */
   .contact-input,
   .contact-select,
   .contact-textarea {
@@ -682,7 +681,6 @@
     min-height: 80px;
   }
 
-  /* Tap targets */
   .contact-field-label {
     min-height: 44px;
     align-items: center;
@@ -695,6 +693,12 @@
   .contact-link-icon-box {
     min-width: 44px;
     min-height: 44px;
+  }
+
+  /* Email preview compact */
+  .contact-email-preview {
+    min-height: 120px;
+    padding: 1rem;
   }
 }
 
