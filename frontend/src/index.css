@@ -135,17 +135,16 @@ body {
   overflow-x: hidden;
   scrollbar-width: none;
   -ms-overflow-style: none;
-}
-
-body::-webkit-scrollbar {
-  display: none;
-}
   background: var(--bg-primary);
   color: var(--text-primary);
   font-family: var(--font-body);
   -webkit-font-smoothing: antialiased;
   overscroll-behavior: none;
   -webkit-tap-highlight-color: transparent;
+}
+
+body::-webkit-scrollbar {
+  display: none;
 }
 
 @media (max-width: 768px) {
