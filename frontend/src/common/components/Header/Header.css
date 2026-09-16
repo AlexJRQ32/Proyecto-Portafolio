@@ -359,8 +359,16 @@
   }
 
   .header-lang-toggle {
-    min-width: 44px;
-    min-height: 44px;
+    padding: 2px 6px;
+    font-size: 0.6rem;
+    gap: 3px;
+    min-width: 0;
+    min-height: 0;
+  }
+
+  .header-lang-icon {
+    width: 11px;
+    height: 11px;
   }
 }
 

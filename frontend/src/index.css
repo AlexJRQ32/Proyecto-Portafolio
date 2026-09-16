@@ -256,6 +256,18 @@ h1{
   .rm-wrapper--collapsed {
     max-height: 5.6em;
     overflow: hidden;
+    position: relative;
+  }
+
+  .rm-wrapper--collapsed::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 2.2em;
+    background: linear-gradient(to bottom, transparent, var(--rm-fade, var(--bg-canvas)));
+    pointer-events: none;
   }
 
   .rm-wrapper--expanded {
@@ -265,8 +277,8 @@ h1{
 
   /* Soft fade on the last line of collapsed text */
   .rm-wrapper--collapsed > p {
-    -webkit-mask-image: linear-gradient(to bottom, black 60%, transparent 100%);
-    mask-image: linear-gradient(to bottom, black 60%, transparent 100%);
+    -webkit-mask-image: none;
+    mask-image: none;
   }
 
   .rm-wrapper--expanded > p {
