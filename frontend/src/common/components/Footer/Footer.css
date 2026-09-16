@@ -57,10 +57,16 @@
   font-weight: 500;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: var(--text-selected);
+  color: var(--text-primary);
   margin: 0 0 var(--space-sm) 0;
   padding-bottom: var(--space-xs);
-  border-bottom: 1px solid var(--border-color);
+}
+
+/* Línea separadora solo en mobile (≤768px), decisión del usuario */
+@media (max-width: 768px) {
+  .footer-heading {
+    border-bottom: 1px solid var(--border-color);
+  }
 }
 
 /* --- Lists --- */
