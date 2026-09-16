@@ -38,9 +38,8 @@ function Topology() {
               <Card {...layer} />
               {index < mergedLayers.length - 1 && (
                 <div className="topology-connector">
-                  <i data-lucide="arrow-right" className="topology-connector-arrow"></i>
-                  <span className="topology-connector-line"></span>
-                </div>
+                    <i data-lucide="arrow-right" className="topology-connector-arrow"></i>
+                  </div>
               )}
             </div>
           ))}
