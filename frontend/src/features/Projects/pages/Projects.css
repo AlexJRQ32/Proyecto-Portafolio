@@ -467,7 +467,7 @@
     position: relative;
   }
 
-  /* Hide arrows on mobile — dots replace navigation */
+      /* Flechas ocultas en movil: swipe + hint */
   .carousel-arrow {
     display: none;
   }
@@ -598,6 +598,52 @@
   }
 
   .carousel-slide {
+    animation: none;
+  }
+}
+
+/* --- Swipe hint (solo movil) --- */
+.carousel-swipe-hint {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .carousel-swipe-hint {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 4px;
+    font-family: var(--font-code);
+    font-size: var(--fs-label-sm);
+    color: var(--text-muted);
+    letter-spacing: 0.04em;
+  }
+
+  .swipe-hint-icon {
+    width: 16px;
+    height: 16px;
+    color: var(--accent);
+    animation: swipe-hint-pulse 1.6s ease-in-out infinite;
+  }
+
+  .swipe-hint-icon:first-child {
+    animation-name: swipe-hint-pulse-left;
+  }
+}
+
+@keyframes swipe-hint-pulse {
+  0%, 100% { transform: translateX(0); opacity: 0.6; }
+  50% { transform: translateX(4px); opacity: 1; }
+}
+
+@keyframes swipe-hint-pulse-left {
+  0%, 100% { transform: translateX(0); opacity: 0.6; }
+  50% { transform: translateX(-4px); opacity: 1; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .swipe-hint-icon {
     animation: none;
   }
 }

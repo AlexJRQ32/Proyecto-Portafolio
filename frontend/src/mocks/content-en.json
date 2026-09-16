@@ -149,9 +149,18 @@
       "directMessage": "DIRECT MESSAGE",
       "tipoLabel": "INQUIRY TYPE",
       "tipoOptions": [
-        { "value": "General Inquiry", "label": "General Inquiry" },
-        { "value": "Job Opportunity", "label": "Job Opportunity" },
-        { "value": "Project Collaboration", "label": "Project Collaboration" }
+        {
+          "value": "General Inquiry",
+          "label": "General Inquiry"
+        },
+        {
+          "value": "Job Opportunity",
+          "label": "Job Opportunity"
+        },
+        {
+          "value": "Project Collaboration",
+          "label": "Project Collaboration"
+        }
       ],
       "nombreLabel": "YOUR NAME / ORGANIZATION",
       "nombrePlaceholder": "Alex Roblero",
@@ -190,7 +199,8 @@
     "prevAria": "Previous project",
     "nextAria": "Next project",
     "dotsAria": "Projects",
-    "viewProjectAria": "View project"
+    "viewProjectAria": "View project",
+    "swipeHint": "Swipe to browse projects"
   },
   "caseStudies": {
     "backLink": "Back to projects",
@@ -199,10 +209,22 @@
     "decisionsLabel": "TECHNICAL DECISIONS",
     "decisionsTitle": "Design decisions",
     "decisions": [
-      { "title": "Computed cycles, never stored", "description": "Date ranges are computed in real-time from the current date, not saved to the database. This simplifies the schema and eliminates inconsistencies." },
-      { "title": "day_of_month for half-month scoping", "description": "Fixed items use day_of_month to determine which half-month they apply to: 1-15 only in the 1st half, 16+ only in the 2nd, null applies to all." },
-      { "title": "Timezone via browser cookie", "description": "The client sends its offset in minutes via cookie. The server computes ranges in the user's local time, avoiding UTC skew." },
-      { "title": "Per-user isolation", "description": "All data is scoped to the authenticated user. Clients never send user IDs: identity comes from the session." }
+      {
+        "title": "Computed cycles, never stored",
+        "description": "Date ranges are computed in real-time from the current date, not saved to the database. This simplifies the schema and eliminates inconsistencies."
+      },
+      {
+        "title": "day_of_month for half-month scoping",
+        "description": "Fixed items use day_of_month to determine which half-month they apply to: 1-15 only in the 1st half, 16+ only in the 2nd, null applies to all."
+      },
+      {
+        "title": "Timezone via browser cookie",
+        "description": "The client sends its offset in minutes via cookie. The server computes ranges in the user's local time, avoiding UTC skew."
+      },
+      {
+        "title": "Per-user isolation",
+        "description": "All data is scoped to the authenticated user. Clients never send user IDs: identity comes from the session."
+      }
     ],
     "stackLabel": "TECH STACK",
     "stackTitle": "Technologies",

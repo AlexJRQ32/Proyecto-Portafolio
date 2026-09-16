@@ -11,7 +11,7 @@ function Projects() {
   const p = t.projects
   // Restore carousel position when returning from a case study
   const savedIndex = Number(sessionStorage.getItem('projects-carousel-index')) || 0
-  const { current, direction, total, goNext, goPrev, setCurrent } = useCarousel(
+  const { current, direction, total, goNext, goPrev, setCurrent, onTouchStart, onTouchEnd } = useCarousel(
     projects.length,
     savedIndex < projects.length ? savedIndex : 0,
   )
@@ -54,7 +54,7 @@ function Projects() {
               <i data-lucide="chevron-left" className="carousel-arrow-icon" />
             </button>
 
-            <div className="carousel-stage" aria-live="polite">
+            <div className="carousel-stage" aria-live="polite" onTouchStart={onTouchStart} onTouchEnd={onTouchEnd}>
               <div key={current} className={`carousel-slide carousel-slide--${direction}`}>
                 <DeviceFrame
                   device={project.device}
@@ -134,8 +134,15 @@ function Projects() {
               </Link>
             </div>
 
-            {/* Dot indicators */}
-            <div className="carousel-dots" role="tablist" aria-label={p.dotsAria}>
+              {/* Swipe hint (mobile only) */}
+              <div className="carousel-swipe-hint" aria-hidden="true">
+                <i data-lucide="chevron-left" className="swipe-hint-icon" />
+                <span>{p.swipeHint}</span>
+                <i data-lucide="chevron-right" className="swipe-hint-icon" />
+              </div>
+
+              {/* Dot indicators */}
+              <div className="carousel-dots" role="tablist" aria-label={p.dotsAria}>
               {projects.map((proj, i) => (
                 <button
                   key={proj.id}

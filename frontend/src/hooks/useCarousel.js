@@ -1,4 +1,4 @@
-import { useState, useCallback, useEffect } from 'react'
+import { useState, useCallback, useEffect, useRef } from 'react'
 
 /**
  * useCarousel — Lógica de carrusel: índice, dirección, navegación, keyboard listener.
@@ -19,6 +19,22 @@ export function useCarousel(total, initialIndex = 0) {
     setCurrent((prev) => (prev - 1 + total) % total)
   }, [total])
 
+  // Swipe táctil: umbral 50px horizontal
+  const touchStartX = useRef(null)
+
+  const onTouchStart = useCallback((e) => {
+    touchStartX.current = e.touches[0]?.clientX
+  }, [])
+
+  const onTouchEnd = useCallback((e) => {
+    if (touchStartX.current === null) return
+    const delta = e.changedTouches[0].clientX - touchStartX.current
+    touchStartX.current = null
+    if (Math.abs(delta) < 50) return
+    if (delta < 0) goNext()
+    else goPrev()
+  }, [goNext, goPrev])
+
   useEffect(() => {
     function handleKeyDown(e) {
       if (e.key === 'ArrowRight') goNext()
@@ -28,5 +44,5 @@ export function useCarousel(total, initialIndex = 0) {
     return () => window.removeEventListener('keydown', handleKeyDown)
   }, [goNext, goPrev])
 
-  return { current, direction, total, goNext, goPrev, setCurrent }
+  return { current, direction, total, goNext, goPrev, setCurrent, onTouchStart, onTouchEnd }
 }

@@ -149,9 +149,18 @@
       "directMessage": "MENSAJE DIRECTO",
       "tipoLabel": "TIPO DE CONSULTA",
       "tipoOptions": [
-        { "value": "Consulta General", "label": "Consulta General" },
-        { "value": "Oportunidad Laboral", "label": "Oportunidad Laboral" },
-        { "value": "Colaboración en Proyecto", "label": "Colaboración en Proyecto" }
+        {
+          "value": "Consulta General",
+          "label": "Consulta General"
+        },
+        {
+          "value": "Oportunidad Laboral",
+          "label": "Oportunidad Laboral"
+        },
+        {
+          "value": "Colaboración en Proyecto",
+          "label": "Colaboración en Proyecto"
+        }
       ],
       "nombreLabel": "TU NOMBRE / ORGANIZACIÓN",
       "nombrePlaceholder": "Alex Roblero",
@@ -190,7 +199,8 @@
     "prevAria": "Proyecto anterior",
     "nextAria": "Proyecto siguiente",
     "dotsAria": "Proyectos",
-    "viewProjectAria": "Ver proyecto"
+    "viewProjectAria": "Ver proyecto",
+    "swipeHint": "Desliza para cambiar de proyecto"
   },
   "caseStudies": {
     "backLink": "Volver a proyectos",
@@ -199,10 +209,22 @@
     "decisionsLabel": "DECISIONES TÉCNICAS",
     "decisionsTitle": "Decisiones de diseño",
     "decisions": [
-      { "title": "Ciclos calculados, nunca almacenados", "description": "Los rangos de fechas se computan en tiempo real a partir de la fecha actual, no se guardan en la base de datos. Esto simplifica el esquema y elimina inconsistencias." },
-      { "title": "day_of_month para alcance por quincena", "description": "Los ítems fijos usan day_of_month para determinar en qué quincena aplican: 1-15 solo en la 1ra, 16+ solo en la 2da, null aplica a todas." },
-      { "title": "Timezone por cookie del navegador", "description": "El cliente envía su offset en minutos via cookie. El servidor calcula rangos en la zona local del usuario, evitando desfaces UTC." },
-      { "title": "Aislamiento por usuario", "description": "Todos los datos están scoped al usuario autenticado. Los clientes nunca envían user IDs: la identidad viene de la sesión." }
+      {
+        "title": "Ciclos calculados, nunca almacenados",
+        "description": "Los rangos de fechas se computan en tiempo real a partir de la fecha actual, no se guardan en la base de datos. Esto simplifica el esquema y elimina inconsistencias."
+      },
+      {
+        "title": "day_of_month para alcance por quincena",
+        "description": "Los ítems fijos usan day_of_month para determinar en qué quincena aplican: 1-15 solo en la 1ra, 16+ solo en la 2da, null aplica a todas."
+      },
+      {
+        "title": "Timezone por cookie del navegador",
+        "description": "El cliente envía su offset en minutos via cookie. El servidor calcula rangos en la zona local del usuario, evitando desfaces UTC."
+      },
+      {
+        "title": "Aislamiento por usuario",
+        "description": "Todos los datos están scoped al usuario autenticado. Los clientes nunca envían user IDs: la identidad viene de la sesión."
+      }
     ],
     "stackLabel": "STACK TECNOLÓGICO",
     "stackTitle": "Tecnologías",
