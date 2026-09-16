@@ -48,7 +48,7 @@
   line-height: 1;
 }
 
-/* Active state: accent color + top line indicator */
+/* Active state: accent color + bottom dot indicator */
 .tabbar-item--active {
   color: var(--accent);
 }
@@ -56,10 +56,12 @@
 .tabbar-item--active::before {
   content: '';
   position: absolute;
-  top: 0;
-  left: 8px;
-  right: 8px;
-  height: 2px;
+  bottom: 6px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
   background-color: var(--accent);
 }
 
@@ -93,11 +95,7 @@
   }
 
   .tabbar-item--active::before {
-    top: 6px;
-    left: 25%;
-    right: 25%;
-    height: 2px;
-    border-radius: 2px;
+    bottom: 5px;
   }
 }
 
