@@ -74,6 +74,13 @@ function Projects() {
             </button>
           </div>
 
+          {/* Swipe hint (mobile only) — pegado al device, antes de la info */}
+          <div className="carousel-swipe-hint" aria-hidden="true">
+            <i data-lucide="chevron-left" className="swipe-hint-icon" />
+            <span>{p.swipeHint}</span>
+            <i data-lucide="chevron-right" className="swipe-hint-icon" />
+          </div>
+
           {/* Project info */}
           <div className="carousel-info">
             <div key={`info-${current}`} className={`carousel-slide carousel-slide--${direction}`}>
@@ -133,13 +140,6 @@ function Projects() {
                 <i data-lucide="arrow-up-right" className="project-button-icon" />
               </Link>
             </div>
-
-              {/* Swipe hint (mobile only) */}
-              <div className="carousel-swipe-hint" aria-hidden="true">
-                <i data-lucide="chevron-left" className="swipe-hint-icon" />
-                <span>{p.swipeHint}</span>
-                <i data-lucide="chevron-right" className="swipe-hint-icon" />
-              </div>
 
               {/* Dot indicators */}
               <div className="carousel-dots" role="tablist" aria-label={p.dotsAria}>

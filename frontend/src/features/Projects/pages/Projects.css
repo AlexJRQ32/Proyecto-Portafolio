@@ -613,7 +613,8 @@
     align-items: center;
     justify-content: center;
     gap: 8px;
-    margin-top: 4px;
+    margin-top: 10px;
+    margin-bottom: 4px;
     font-family: var(--font-code);
     font-size: var(--fs-label-sm);
     color: var(--text-muted);
