@@ -139,45 +139,9 @@
 /* ===== Responsive ===== */
 
 @media (max-width: 768px) {
+  /* Footer hidden on mobile — TabBar replaces it */
   .footer {
-    padding-bottom: env(safe-area-inset-bottom);
-  }
-
-  .footer-container {
-    grid-template-columns: 1fr;
-    gap: var(--space-md);
-    text-align: center;
-    padding: var(--space-md) var(--gutter);
-  }
-
-  .footer-brand-name {
-    justify-content: center;
-  }
-
-  .footer-brand-description {
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .footer-list {
-    align-items: center;
-  }
-
-  .footer-heading {
-    text-align: center;
-  }
-
-  .footer-link {
-    min-height: 44px;
-    align-items: center;
-  }
-
-  .footer-social-icon {
-    min-width: 44px;
-    min-height: 44px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    display: none;
   }
 }
 
