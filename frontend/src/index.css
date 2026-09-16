@@ -291,10 +291,12 @@ h1{
   }
 
   .rm-toggle {
-    display: inline-flex;
+    display: flex;
+    width: fit-content;
     align-items: center;
     gap: 4px;
     margin-top: 6px;
+    margin-left: auto;
     padding: 0;
     background: none;
     border: none;

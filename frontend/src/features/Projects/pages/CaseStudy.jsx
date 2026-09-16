@@ -20,7 +20,7 @@ function CaseStudy() {
   const decisionsRef = useReveal()
   const stackRef = useReveal()
   const featuresRef = useReveal()
-  const { expanded: problemExpanded, toggle: problemToggle } = useReadMore()
+  const { expanded: problemExpanded, toggle: problemToggle, textRef: problemTextRef, needsToggle: problemNeeds } = useReadMore([slug, lang])
   const cs = t.caseStudies || {}
   const c = t.common
 
@@ -73,9 +73,10 @@ function CaseStudy() {
           <h2 className="case-study-section-title" id="problem-heading">
             {cs.problemTitle || 'Qué es y por qué existe'}
           </h2>
-          <div className={`rm-wrapper rm-wrapper--collapsed${problemExpanded ? ' rm-wrapper--expanded' : ''}`}>
+          <div ref={problemTextRef} className={`rm-wrapper rm-wrapper--collapsed${problemExpanded ? ' rm-wrapper--expanded' : ''}`}>
             <p className="case-study-text">{cs.problemText || study.problem}</p>
           </div>
+          {problemNeeds && (
           <button
             className={`rm-toggle${problemExpanded ? ' rm-toggle--expanded' : ''}`}
             onClick={problemToggle}
@@ -85,6 +86,7 @@ function CaseStudy() {
             {problemExpanded ? c.readLess : c.readMore}
             <i data-lucide="chevron-down" className="rm-toggle-icon" aria-hidden="true" />
           </button>
+          )}
         </section>
 
         {/* Decisions */}

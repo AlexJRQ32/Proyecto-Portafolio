@@ -17,7 +17,7 @@ function Projects() {
     projects.length,
     savedIndex < projects.length ? savedIndex : 0,
   )
-  const { expanded: descExpanded, toggle: descToggle } = useReadMore()
+  const { expanded: descExpanded, toggle: descToggle, textRef: descTextRef, needsToggle: descNeeds } = useReadMore([current])
 
   const handleViewCase = () => {
     sessionStorage.setItem('projects-carousel-index', String(current))
@@ -105,9 +105,10 @@ function Projects() {
             <h2 className="carousel-title" id="project-title-current">
               {project.title}
             </h2>
-            <div className={`rm-wrapper rm-wrapper--collapsed${descExpanded ? ' rm-wrapper--expanded' : ''}`}>
+            <div ref={descTextRef} className={`rm-wrapper rm-wrapper--collapsed${descExpanded ? ' rm-wrapper--expanded' : ''}`}>
               <p className="carousel-description">{project.description}</p>
             </div>
+            {descNeeds && (
             <button
               className={`rm-toggle${descExpanded ? ' rm-toggle--expanded' : ''}`}
               onClick={descToggle}
@@ -117,6 +118,7 @@ function Projects() {
               {descExpanded ? c.readLess : c.readMore}
               <i data-lucide="chevron-down" className="rm-toggle-icon" aria-hidden="true" />
             </button>
+            )}
             <div className="project-badges">
               {project.badges.map((badge) => (
                 <span key={badge} className="project-badge">

@@ -11,7 +11,7 @@ function Hero() {
   const titleRef = useReveal()
   const descRef = useReveal()
   const actionsRef = useReveal()
-  const { expanded, toggle } = useReadMore()
+  const { expanded, toggle, textRef, needsToggle } = useReadMore([t.home.hero.description])
   const c = t.common
 
   useLucideIcons([expanded])
@@ -29,11 +29,12 @@ function Hero() {
           <div className="hero-left">
             <h1 ref={titleRef} className='hero-title reveal reveal-delay-2' id='hero-title'>{t.home.hero.title} <span className='hero-title-accent'>{t.home.hero.titleAccent}</span> {t.home.hero.titleSuffix}</h1>
             <div ref={descRef} className="reveal reveal-delay-3">
-            <div className={`rm-wrapper rm-wrapper--collapsed${expanded ? ' rm-wrapper--expanded' : ''}`}>
+            <div ref={textRef} className={`rm-wrapper rm-wrapper--collapsed${expanded ? ' rm-wrapper--expanded' : ''}`}>
               <p className='hero-description'>
                 {t.home.hero.description}
               </p>
             </div>
+            {needsToggle && (
             <button
               className={`rm-toggle${expanded ? ' rm-toggle--expanded' : ''}`}
               onClick={toggle}
@@ -43,6 +44,7 @@ function Hero() {
               {expanded ? c.readLess : c.readMore}
               <i data-lucide="chevron-down" className="rm-toggle-icon" aria-hidden="true" />
             </button>
+            )}
             </div>
           </div>
         </div>

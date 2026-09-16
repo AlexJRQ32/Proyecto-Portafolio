@@ -15,7 +15,7 @@ function About() {
   const titleRef = useReveal()
   const descRef = useReveal()
   const cardsRef = useReveal()
-  const { expanded: descExpanded, toggle: descToggle } = useReadMore()
+  const { expanded: descExpanded, toggle: descToggle, textRef: descTextRef, needsToggle: descNeeds } = useReadMore([about.description])
   const c = t.common
 
   useLucideIcons([descExpanded])
@@ -38,13 +38,13 @@ function About() {
             {about.titleSuffix}
           </h1>
           <div ref={descRef} className="reveal reveal-delay-3">
-            <div className={`rm-wrapper rm-wrapper--collapsed${descExpanded ? ' rm-wrapper--expanded' : ''}`}>
+            <div ref={descTextRef} className={`rm-wrapper rm-wrapper--collapsed${descExpanded ? ' rm-wrapper--expanded' : ''}`}>
               <p className="about-description">
                 {about.description}
               </p>
             </div>
-          </div>
-          <button
+            {descNeeds && (
+            <button
             className={`rm-toggle${descExpanded ? ' rm-toggle--expanded' : ''}`}
             onClick={descToggle}
             aria-expanded={descExpanded}
@@ -53,6 +53,8 @@ function About() {
             {descExpanded ? c.readLess : c.readMore}
             <i data-lucide="chevron-down" className="rm-toggle-icon" aria-hidden="true" />
           </button>
+          )}
+          </div>
         </header>
       </div>
 
@@ -86,3 +88,4 @@ function About() {
 }
 
 export default About
+ 
