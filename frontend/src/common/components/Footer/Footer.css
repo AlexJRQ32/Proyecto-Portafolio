@@ -1,90 +1,168 @@
-.footer{
+/* ============================================
+   FOOTER — Terminal/engineering aesthetic
+   Consistent with site: monospace labels,
+   accent hovers, border-first hierarchy
+   ============================================ */
+
+.footer {
   width: 100%;
-  background-color: var(--bg-surface-low);
-  border-top: 1px solid var(--border-color);
+  background-color: var(--bg-canvas);
+  border-top: 2px solid var(--border-color);
   font-family: var(--font-body);
   color: var(--text-primary);
   margin-top: auto;
 }
 
-.footer-container{
+.footer-container {
   max-width: var(--container-max);
   margin: 0 auto;
-  padding: var(--space-md) var(--gutter);
+  padding: var(--space-lg) var(--gutter);
   display: grid;
   grid-template-columns: 2fr 1fr 1fr;
-  gap: var(--space-md);
+  gap: var(--space-lg);
 }
 
-.footer-brand-name{
+/* --- Brand --- */
+
+.footer-brand-name {
   display: flex;
-  font-family: var(--font-heading);
-  font-size: 1.1rem;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-code);
+  font-size: 0.85rem;
+  font-weight: 600;
   color: var(--text-secondary);
-  gap: 5px;
 }
 
-.footer-brand-description{
-  margin-top: var(--space-xs);
+.footer-brand-icon {
+  width: 16px;
+  height: 16px;
+  color: var(--accent);
+  flex-shrink: 0;
+}
+
+.footer-brand-description {
+  margin-top: var(--space-sm);
   color: var(--text-muted);
   max-width: 320px;
-  line-height: 1.5;
+  line-height: 1.6;
   font-size: 0.85rem;
 }
 
-.footer-heading{
-  font-family: var(--font-heading);
-  font-size: 0.85rem;
-  color: var(--text-secondary);
-  margin-bottom: var(--space-xs);
+/* --- Headings (labels) --- */
+
+.footer-heading {
+  font-family: var(--font-code);
+  font-size: var(--fs-label-sm);
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-selected);
+  margin: 0 0 var(--space-sm) 0;
+  padding-bottom: var(--space-xs);
+  border-bottom: 1px solid var(--border-color);
 }
 
-.footer-list{
+/* --- Lists --- */
+
+.footer-list {
   list-style: none;
   padding: 0;
   margin: 0;
   display: flex;
   flex-direction: column;
-  gap: 2px;
+  gap: 6px;
 }
 
-.footer-link{
+.footer-list-item {
+  position: relative;
+}
+
+.footer-link {
   color: var(--text-muted);
   text-decoration: none;
-  transition: color var(--transition-base, 0.2s ease);
   display: inline-flex;
   align-items: center;
   gap: 6px;
   font-size: 0.85rem;
+  transition: color var(--transition-fast);
 }
 
-.footer-link:hover{
-  color: var(--text-selected);
+.footer-link:hover {
+  color: var(--accent);
 }
 
-.footer-bottom{
-  border-top: 1px solid var(--border-color);
-  padding: var(--space-xs) var(--gutter);
-  display: block;
+/* Social icons */
+
+.footer-social-icon {
+  width: 14px;
   text-align: center;
+  flex-shrink: 0;
+  color: var(--text-muted);
+  transition: color var(--transition-fast);
+}
+
+.footer-link:hover .footer-social-icon {
+  color: var(--accent);
+}
+
+/* --- Bottom bar --- */
+
+.footer-bottom {
+  border-top: 2px solid var(--border-color);
+  padding: var(--space-sm) var(--gutter);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
   color: var(--text-disabled);
-  font-size: 0.75rem;
+  font-family: var(--font-code);
+  font-size: 0.7rem;
+  letter-spacing: 0.05em;
+}
+
+.footer-bottom-dot {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: var(--accent);
+  flex-shrink: 0;
 }
 
 /* ===== Responsive ===== */
+
 @media (max-width: 768px) {
-  .footer-container{
+  .footer-container {
     grid-template-columns: 1fr;
     gap: var(--space-md);
     text-align: center;
+    padding: var(--space-md) var(--gutter);
   }
 
-  .footer-brand-description{
+  .footer-brand-name {
+    justify-content: center;
+  }
+
+  .footer-brand-description {
     margin-left: auto;
     margin-right: auto;
   }
 
-  .footer-list{
+  .footer-list {
     align-items: center;
+  }
+
+  .footer-heading {
+    text-align: center;
+  }
+}
+
+/* ===== Reduced motion ===== */
+
+@media (prefers-reduced-motion: reduce) {
+  .footer-link,
+  .footer-social-icon {
+    transition: none;
   }
 }
