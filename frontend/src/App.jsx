@@ -1,5 +1,5 @@
 import './App.css'
-import { Routes, Route, Navigate } from 'react-router-dom'
+import { Routes, Route, Navigate, useLocation } from 'react-router-dom'
 import { useScrollTop } from './hooks/useScrollTop'
 import Home from './features/Home/pages/Home'
 import Projects from './features/Projects/pages/Projects'
@@ -13,9 +13,14 @@ import Header from './common/components/Header/Header'
 function App() {
   useScrollTop()
 
+  // Known routes get Header/Footer; unknown routes (404) render standalone
+  const { pathname } = useLocation()
+  const knownRoutes = ['/home', '/projects', '/about', '/contact']
+  const isKnownRoute = knownRoutes.some((r) => pathname === r || pathname.startsWith(`${r}/`))
+
   return (
     <div className='app'>
-      <Header />
+      {isKnownRoute && <Header />}
       <main className='app-content'>
         <Routes>
           <Route path='/' element={<Navigate to="/home" replace />} />
@@ -27,7 +32,7 @@ function App() {
           <Route path='*' element={<NotFound />}/>
         </Routes>
       </main>
-      <Footer />
+      {isKnownRoute && <Footer />}
     </div>
   )
 }
