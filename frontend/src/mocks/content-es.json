@@ -238,5 +238,11 @@
     "linkedin": "LinkedIn",
     "email": "Correo",
     "copyright": "Todos los derechos reservados."
+  },
+  "notFound": {
+    "label": "ERROR // 404",
+    "title": "Pagina no encontrada",
+    "description": "La ruta que intentas acceder no existe o fue movida.",
+    "cta": "VOLVER AL INICIO"
   }
 }

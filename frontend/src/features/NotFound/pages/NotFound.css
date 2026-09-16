@@ -1,0 +1,129 @@
+/* ============================================
+   NOT FOUND — Terminal-style 404 page
+   ============================================ */
+
+.not-found {
+  min-height: calc(100vh - 50px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-lg) var(--gutter);
+  background: var(--bg-canvas);
+}
+
+.not-found-card {
+  background: #141414;
+  border: 2px solid var(--border-color);
+  border-radius: 2px;
+  padding: var(--space-xl) var(--space-lg);
+  max-width: 520px;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-md);
+}
+
+/* --- Label monospace --- */
+.not-found-label {
+  font-family: var(--font-code);
+  font-size: var(--fs-label-sm);
+  color: var(--accent);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+.not-found-label-line {
+  display: inline-block;
+  width: 24px;
+  height: 1px;
+  background: var(--accent);
+  opacity: 0.5;
+}
+
+/* --- Error code grande --- */
+.not-found-code {
+  font-family: var(--font-code);
+  font-size: clamp(80px, 15vw, 140px);
+  font-weight: 700;
+  line-height: 1;
+  color: var(--text-secondary);
+  opacity: 0.08;
+  user-select: none;
+  margin: calc(-1 * var(--space-md)) 0 calc(-1 * var(--space-sm));
+}
+
+/* --- Titulo --- */
+.not-found-title {
+  font-family: var(--font-heading);
+  font-size: var(--fs-headline-lg);
+  font-weight: var(--fw-headline);
+  color: var(--text-secondary);
+  margin: 0;
+  line-height: var(--lh-headline);
+}
+
+/* --- Descripcion --- */
+.not-found-description {
+  font-size: var(--fs-body-md);
+  color: var(--text-muted);
+  line-height: var(--lh-body);
+  margin: 0;
+  max-width: 360px;
+}
+
+/* --- Boton CTA --- */
+.not-found-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-sm);
+  margin-top: var(--space-sm);
+  padding: 12px 28px;
+  background: var(--accent);
+  color: var(--accent-strong);
+  font-family: var(--font-code);
+  font-size: var(--fs-label-md);
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  text-decoration: none;
+  border: none;
+  border-radius: 2px;
+  cursor: pointer;
+  transition: background var(--transition-fast), transform var(--transition-fast);
+}
+
+.not-found-cta:hover {
+  background: var(--accent-light);
+  transform: translateY(-1px);
+}
+
+.not-found-cta:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.not-found-cta-icon {
+  width: 16px;
+  height: 16px;
+  stroke-width: 2.5;
+}
+
+/* --- Responsive --- */
+@media (max-width: 768px) {
+  .not-found {
+    padding: var(--space-lg) var(--space-md);
+  }
+
+  .not-found-card {
+    padding: var(--space-lg) var(--space-md);
+  }
+
+  .not-found-title {
+    font-size: var(--fs-headline-md);
+  }
+}

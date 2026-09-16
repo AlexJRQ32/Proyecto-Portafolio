@@ -238,5 +238,11 @@
     "linkedin": "LinkedIn",
     "email": "Email",
     "copyright": "All rights reserved."
+  },
+  "notFound": {
+    "label": "ERROR // 404",
+    "title": "Page not found",
+    "description": "The route you are trying to access does not exist or was moved.",
+    "cta": "BACK TO HOME"
   }
 }

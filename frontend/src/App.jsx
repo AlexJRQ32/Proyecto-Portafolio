@@ -6,6 +6,7 @@ import Projects from './features/Projects/pages/Projects'
 import CaseStudy from './features/Projects/pages/CaseStudy'
 import About from './features/About/pages/About'
 import Contact from './features/Contact/pages/Contact'
+import NotFound from './features/NotFound/pages/NotFound'
 import Footer from './common/components/Footer/Footer'
 import Header from './common/components/Header/Header'
 
@@ -23,6 +24,7 @@ function App() {
           <Route path='/projects/:slug' element={<CaseStudy />}/>
           <Route path='/about' element={<About />}/>
           <Route path='/contact' element={<Contact />}/>
+          <Route path='*' element={<NotFound />}/>
         </Routes>
       </main>
       <Footer />
