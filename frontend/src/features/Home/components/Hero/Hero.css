@@ -120,7 +120,7 @@
   }
 
   .rm-wrapper {
-    --rm-fade: var(--bg-hero-home);
+    --rm-fade: transparent;
   }
 
   .hero-container {
