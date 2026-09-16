@@ -9,7 +9,6 @@ import Contact from './features/Contact/pages/Contact'
 import NotFound from './features/NotFound/pages/NotFound'
 import Footer from './common/components/Footer/Footer'
 import Header from './common/components/Header/Header'
-import TabBar from './common/components/TabBar/TabBar'
 
 function App() {
   useScrollTop()
@@ -34,7 +33,6 @@ function App() {
         </Routes>
       </main>
       {isKnownRoute && <Footer />}
-      {isKnownRoute && <TabBar />}
     </div>
   )
 }

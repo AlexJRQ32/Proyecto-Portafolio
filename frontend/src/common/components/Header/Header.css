@@ -335,26 +335,6 @@
   }
 }
 
-/* On ≤768px, TabBar replaces all nav — keep only logo */
-@media (max-width: 768px) {
-  .header-menu-toggle {
-    display: none !important;
-  }
-
-  .header-nav {
-    display: none !important;
-  }
-
-  .header-actions {
-    display: none !important;
-  }
-
-  .header-mobile-backdrop,
-  .header-mobile-menu {
-    display: none !important;
-  }
-}
-
 @media (max-width: 768px) {
   .header {
     height: calc(50px + env(safe-area-inset-top));
