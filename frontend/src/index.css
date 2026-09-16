@@ -239,3 +239,80 @@ h1{
     -webkit-tap-highlight-color: transparent;
   }
 }
+
+/* ============================================
+   READ MORE — Mobile text collapse
+   ============================================ */
+.rm-toggle {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .rm-wrapper {
+    position: relative;
+    transition: max-height 300ms ease;
+  }
+
+  .rm-wrapper--collapsed {
+    max-height: 5.6em;
+    overflow: hidden;
+  }
+
+  .rm-wrapper--expanded {
+    max-height: none;
+    overflow: visible;
+  }
+
+  /* Soft fade on the last line of collapsed text */
+  .rm-wrapper--collapsed > p {
+    -webkit-mask-image: linear-gradient(to bottom, black 60%, transparent 100%);
+    mask-image: linear-gradient(to bottom, black 60%, transparent 100%);
+  }
+
+  .rm-wrapper--expanded > p {
+    -webkit-mask-image: none;
+    mask-image: none;
+  }
+
+  .rm-toggle {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    margin-top: 6px;
+    padding: 0;
+    background: none;
+    border: none;
+    font-family: var(--font-code);
+    font-size: var(--fs-label-sm);
+    font-weight: var(--fw-headline);
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--accent);
+    cursor: pointer;
+    min-height: 44px;
+    transition: color var(--transition-fast);
+  }
+
+  .rm-toggle:hover {
+    color: var(--accent-light);
+  }
+
+  .rm-toggle-icon {
+    width: 14px;
+    height: 14px;
+    transition: transform 200ms ease;
+  }
+
+  .rm-toggle--expanded .rm-toggle-icon {
+    transform: rotate(180deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .rm-wrapper {
+    transition: none;
+  }
+  .rm-toggle-icon {
+    transition: none;
+  }
+}

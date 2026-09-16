@@ -2,6 +2,7 @@ import { useParams, Link } from 'react-router-dom'
 import { useLanguage } from '../../../context/LanguageContext'
 import { useReveal } from '../../../hooks/useReveal'
 import { useLucideIcons } from '../../../hooks/useLucideIcons'
+import { useReadMore } from '../../../hooks/useReadMore'
 import caseStudiesEs from '../../../mocks/case-studies-es.json'
 import caseStudiesEn from '../../../mocks/case-studies-en.json'
 import './CaseStudy.css'
@@ -19,8 +20,11 @@ function CaseStudy() {
   const decisionsRef = useReveal()
   const stackRef = useReveal()
   const featuresRef = useReveal()
+  const { expanded: problemExpanded, toggle: problemToggle } = useReadMore()
+  const cs = t.caseStudies || {}
+  const c = t.common
 
-  useLucideIcons([lang, slug])
+  useLucideIcons([lang, slug, problemExpanded])
 
   if (!study) {
     return (
@@ -35,8 +39,6 @@ function CaseStudy() {
       </section>
     )
   }
-
-  const cs = t.caseStudies || {}
 
   return (
     <section className="case-study-page" aria-labelledby="case-study-title">
@@ -71,7 +73,18 @@ function CaseStudy() {
           <h2 className="case-study-section-title" id="problem-heading">
             {cs.problemTitle || 'Qué es y por qué existe'}
           </h2>
-          <p className="case-study-text">{cs.problemText || study.problem}</p>
+          <div className={`rm-wrapper rm-wrapper--collapsed${problemExpanded ? ' rm-wrapper--expanded' : ''}`}>
+            <p className="case-study-text">{cs.problemText || study.problem}</p>
+          </div>
+          <button
+            className={`rm-toggle${problemExpanded ? ' rm-toggle--expanded' : ''}`}
+            onClick={problemToggle}
+            aria-expanded={problemExpanded}
+            type="button"
+          >
+            {problemExpanded ? c.readLess : c.readMore}
+            <i data-lucide="chevron-down" className="rm-toggle-icon" aria-hidden="true" />
+          </button>
         </section>
 
         {/* Decisions */}

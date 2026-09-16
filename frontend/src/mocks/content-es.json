@@ -266,5 +266,9 @@
     "title": "Pagina no encontrada",
     "description": "La ruta que intentas acceder no existe o fue movida.",
     "cta": "VOLVER AL INICIO"
+  },
+  "common": {
+    "readMore": "Leer más",
+    "readLess": "Leer menos"
   }
 }
