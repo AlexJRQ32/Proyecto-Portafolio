@@ -393,6 +393,19 @@
   color: var(--text-secondary);
 }
 
+/* --- Button case study --- */
+.project-button--case {
+  color: var(--accent);
+  border: 1px solid var(--accent);
+  padding: 8px 16px;
+  border-radius: var(--radius-sm);
+}
+
+.project-button--case:hover {
+  background-color: var(--accent-10);
+  color: var(--accent-light);
+}
+
 .project-button-icon {
   width: 14px;
   height: 14px;

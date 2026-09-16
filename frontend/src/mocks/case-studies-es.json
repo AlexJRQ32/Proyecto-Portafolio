@@ -1,0 +1,182 @@
+[
+  {
+    "id": "openfinances",
+    "slug": "openfinances",
+    "code": "PRY 001",
+    "title": "OpenFinances",
+    "status": "DESPLEGADO",
+    "statusColor": "green",
+    "tagline": "FINANZAS // NEXT.JS + SUPABASE",
+    "badges": ["NEXT.JS", "SUPABASE", "TYPESCRIPT", "PWA"],
+    "buttonUrl": "https://openfinances.vercel.app",
+    "buttonLabel": "VER SITIO",
+    "repoUrl": "https://github.com/AlexJRQ32/OpenFinances",
+    "image": "/projects/openfinances.png",
+    "problem": "Necesitaba una app de finanzas personales para administrar presupuestos quincenales y mensuales con ingresos y gastos fijos y variables. Las apps existentes no ofrecían un cálculo en vivo del ciclo activo según la zona horaria del usuario ni una PWA instalable con tipo de cambio del BCCR.",
+    "decisions": [
+      {
+        "title": "Ciclos calculados, nunca almacenados",
+        "description": "Los rangos de fechas (quincenal 1ra/2da quincena y mensual) se computan en tiempo real a partir de la fecha actual, no se guardan en la base de datos. Esto simplifica el esquema y elimina inconsistencias."
+      },
+      {
+        "title": "day_of_month para alcance por quincena",
+        "description": "Los ítems fijos usan day_of_month para determinar en qué quincena aplican: 1-15 solo en la 1ra, 16+ solo en la 2da, null aplica a todas. En modo mensual se incluyen todos."
+      },
+      {
+        "title": "Timezone por cookie del navegador",
+        "description": "El cliente envía su offset en minutos via cookie (localTzOffsetMinutes). El servidor calcula rangos en la zona local del usuario, evitando desfaces UTC."
+      },
+      {
+        "title": "Aislamiento por usuario",
+        "description": "Todos los datos están scoped al usuario autenticado. Los clientes nunca envían user IDs: la identidad viene de la sesión (getCurrentUser en auth.ts)."
+      }
+    ],
+    "stack": [
+      { "layer": "Framework", "tech": "Next.js 16 (App Router, Server Actions, RSC)" },
+      { "layer": "Lenguaje", "tech": "TypeScript" },
+      { "layer": "Estilos", "tech": "Tailwind CSS 4" },
+      { "layer": "Base de datos", "tech": "PostgreSQL en Supabase" },
+      { "layer": "ORM", "tech": "Drizzle ORM" },
+      { "layer": "Auth", "tech": "Auth.js v5 (Google OAuth + credenciales con scrypt, sesiones JWT)" },
+      { "layer": "Hosting", "tech": "Vercel" },
+      { "layer": "Tests", "tech": "node:test via tsx (43 tests)" }
+    ],
+    "features": [
+      "Presupuestos quincenales (1ra/2da quincena) y vista mensual",
+      "Ingresos y gastos fijos y variables con alcance por quincena",
+      "Detección en vivo del ciclo activo (flips en medianoche local día 1 y 16)",
+      "Auth: Google OAuth + email/contraseña con registro abierto",
+      "PWA instalable con UI dark glassmorphism, modals y toasts",
+      "Tipo de cambio BCCR en vivo, moneda CRC, interfaz en español"
+    ]
+  },
+  {
+    "id": "openpaw",
+    "slug": "openpaw",
+    "code": "PRY 002",
+    "title": "OpenPaw",
+    "status": "DESPLEGADO",
+    "statusColor": "green",
+    "tagline": "CARNET MASCOTAS // ASP.NET + REACT",
+    "badges": ["ASP.NET CORE", "REACT", "SQL SERVER", "AZURE DEVOPS"],
+    "buttonUrl": "https://openpaw-devs.vercel.app",
+    "buttonLabel": "VER SITIO",
+    "repoUrl": "https://github.com/AlexJRQ32/OpenPaw",
+    "image": "/projects/openpaw.png",
+    "problem": "Necesitaba una plataforma veterinaria con gestión de mascotas, expediente clínico digital compartible, citas, emergencias, inventario para almacenes, marketplace con carrito, servicios, traslados, aprobaciones y registro de veterinarias y tiendas. El reto era combinar autenticación con Google, gestionar secrets de forma segura y coordinar un equipo con Azure DevOps.",
+    "decisions": [
+      {
+        "title": "JWT + Google Login",
+        "description": "Autenticación via JWT para la API y Google Login para acceso rápido desde móviles. El token JWT se valida en cada request del backend."
+      },
+      {
+        "title": "Secrets por variables de entorno (fail-fast)",
+        "description": "Ningún secret en plaintext en el repo. Las env vars ConnectionStrings, Jwt:Key y Google:ClientId son obligatorias: si falta alguna, la API arranca con InvalidOperationException explícito."
+      },
+      {
+        "title": "Azure DevOps Boards",
+        "description": "Gestión del proyecto con boards de trabajo, PRs revisados y ramas feature. Workflow Scrum de 2 semanas con revisión obligatoria."
+      }
+    ],
+    "stack": [
+      { "layer": "Backend", "tech": "ASP.NET Core Web API (C#)" },
+      { "layer": "Frontend", "tech": "React + Vite" },
+      { "layer": "Base de datos", "tech": "SQL Server" },
+      { "layer": "DevOps", "tech": "Azure DevOps (Git + Boards)" }
+    ],
+    "features": [
+      "Gestión de mascotas y expediente clínico digital compartible",
+      "Citas veterinarias y registro de emergencias",
+      "Inventario para almacenes veterinarios",
+      "Marketplace con carrito de compras, servicios y traslados",
+      "Sistema de aprobaciones y registro de veterinarias y tiendas",
+      "Dashboard y perfil de usuario",
+      "Auth JWT + Google Login, secrets por env vars con fail-fast",
+      "Desplegado en Somee/Vercel, gestionado con Azure DevOps"
+    ]
+  },
+  {
+    "id": "trustride",
+    "slug": "trustride",
+    "code": "PRY 004",
+    "title": "Trustride",
+    "status": "PROTOTIPO",
+    "statusColor": "gray",
+    "tagline": "UI PROTOTIPO // REACT",
+    "badges": ["REACT", "FIGMA", "VITE"],
+    "buttonUrl": "https://trustride-ui.vercel.app",
+    "buttonLabel": "VER PROYECTO",
+    "repoUrl": "https://github.com/AlexJRQ32/Proyecto-Trustride",
+    "image": "/projects/trustride.png",
+    "problem": "Prototipo de interfaz para una app de paseo de mascotas. El objetivo era explorar la experiencia de usuario en mobile-first, definiendo la arquitectura modular por features antes de construir el backend.",
+    "decisions": [
+      {
+        "title": "Arquitectura modular por features",
+        "description": "Cada funcionalidad (búsqueda, perfil, reservas) vive en su propia carpeta con componentes, hooks y estilos dedicados. Facilita el desarrollo independiente y la testing."
+      },
+      {
+        "title": "Mobile-first, responsive web",
+        "description": "Diseño optimizado para móvil primero, con breakpoints que adaptan la UI a desktop sin romper la experiencia táctil."
+      },
+      {
+        "title": "Monorepo preparado para backend",
+        "description": "Estructura de proyecto preparada para integrar SQL Server + .NET Core Web API + React+Vite cuando se defina el backend."
+      }
+    ],
+    "stack": [
+      { "layer": "Frontend", "tech": "React + Vite" },
+      { "layer": "Diseño", "tech": "Figma" },
+      { "layer": "Deploy", "tech": "Vercel" },
+      { "layer": "Estado", "tech": "React State / Context" }
+    ],
+    "features": [
+      "Prototipo UI de interfaz para paseo de mascotas",
+      "Arquitectura modular por features",
+      "Mobile-first con responsive web",
+      "Estructura preparada para backend (.NET + SQL Server)",
+      "Desplegado en Vercel para prueba interactiva"
+    ]
+  },
+  {
+    "id": "islavic",
+    "slug": "islavic",
+    "code": "PRY 003",
+    "title": "ISLAVIC",
+    "status": "DESPLEGADO",
+    "statusColor": "green",
+    "tagline": "E-COMMERCE // REACT + VITE",
+    "badges": ["REACT 19", "VITE", "VERCEL", "OXLINT"],
+    "buttonUrl": "https://islavic-luxury-finds.vercel.app",
+    "buttonLabel": "VER SITIO",
+    "repoUrl": "https://github.com/AlexJRQ32/Islavic-Luxury-Finds",
+    "image": "/projects/islavic.png",
+    "problem": "Desarrollada para un negocio en operación, es una tienda en línea con catálogo de productos. El reto era entregar una interfaz pulida con React 19, mantener calidad de código con linting estricto y desplegar rápidamente en producción.",
+    "decisions": [
+      {
+        "title": "React 19 + Vite para velocidad de build",
+        "description": "Vite ofrece HMR instantáneo y builds optimizados. React 19 permite usar las últimas features de Server Components y Streaming."
+      },
+      {
+        "title": "Oxlint para linting estricto",
+        "description": "Oxlint como linter principal para reglas de calidad y consistencia. Más rápido que ESLint en proyectos grandes."
+      },
+      {
+        "title": "Deploy en Vercel",
+        "description": "Deploy automático en Vercel con preview por PR. Sin configuración de infraestructura, el negocio ve el resultado en minutos."
+      }
+    ],
+    "stack": [
+      { "layer": "Framework", "tech": "React 19" },
+      { "layer": "Build", "tech": "Vite" },
+      { "layer": "Linter", "tech": "Oxlint" },
+      { "layer": "Deploy", "tech": "Vercel" }
+    ],
+    "features": [
+      "Tienda en línea con catálogo de productos",
+      "React 19 con las últimas features",
+      "Linting estricto con Oxlint",
+      "Deploy automático en Vercel",
+      "En uso por un negocio real"
+    ]
+  }
+]

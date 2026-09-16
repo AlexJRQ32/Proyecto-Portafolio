@@ -1,30 +1,18 @@
-﻿[
-  {
-    "id": "openfinances",
-    "code": "PRY 001",
-    "status": "DESPLEGADO",
-    "title": "OpenFinances",
-    "number": "01",
-    "description": "App web de finanzas personales pensada para móvil e instalable en el celular como app nativa. Presupuesto quincenal/mensual con ingresos y gastos fijos, autenticación dual (propietario + invitado), tipo de cambio del BCCR en vivo desde la API de Hacienda y despliegue continuo en Vercel.",
-    "device": "phone",
-    "tagline": "FINANZAS // NEXT.JS + SUPABASE",
-    "badges": ["NEXT.JS", "SUPABASE", "TYPESCRIPT"],
-    "buttonLabel": "VER SITIO",
-    "buttonUrl": "https://openfinances.vercel.app",
-    "buttonIcon": "arrow-right",
-    "repoUrl": "https://github.com/AlexJRQ32/OpenFinances",
-    "image": "/projects/openfinances.png"
-  },
+[
   {
     "id": "openpaw",
-    "code": "PRY 002",
+    "code": "PRY 001",
     "status": "DESPLEGADO",
     "title": "OpenPaw",
-    "number": "02",
-    "description": "Carnet digital de mascotas compartible (estilo EDUS de Costa Rica) para veterinarias y almacenes veterinarios: historial de vacunas y datos de la mascota accesibles por QR. API con ASP.NET Core, autenticación JWT + Facebook Login, frontend React y SQL Server. Gestionado con Azure DevOps.",
+    "number": 1,
+    "description": "Plataforma veterinaria con gestión de mascotas, expediente clínico digital compartible, citas, emergencias, inventario, marketplace con carrito, servicios, traslados, aprobaciones y registro de veterinarias y tiendas. API con ASP.NET Core, autenticación JWT + Google Login, frontend React y SQL Server. Gestionado con Azure DevOps.",
     "device": "monitor",
     "tagline": "CARNET MASCOTAS // ASP.NET + REACT",
-    "badges": ["ASP.NET CORE", "REACT", "SQL SERVER"],
+    "badges": [
+      "ASP.NET CORE",
+      "REACT",
+      "SQL SERVER"
+    ],
     "buttonLabel": "VER SITIO",
     "buttonUrl": "https://openpaw-devs.vercel.app",
     "buttonIcon": "arrow-right",
@@ -32,15 +20,39 @@
     "image": "/projects/openpaw.png"
   },
   {
+    "id": "openfinances",
+    "code": "PRY 002",
+    "status": "DESPLEGADO",
+    "title": "OpenFinances",
+    "number": 2,
+    "description": "App web de finanzas personales pensada para móvil e instalable en el celular como app nativa. Presupuesto quincenal/mensual con ingresos y gastos fijos, autenticación dual (propietario + invitado), tipo de cambio del BCCR en vivo desde la API de Hacienda y despliegue continuo en Vercel.",
+    "device": "phone",
+    "tagline": "FINANZAS // NEXT.JS + SUPABASE",
+    "badges": [
+      "NEXT.JS",
+      "SUPABASE",
+      "TYPESCRIPT"
+    ],
+    "buttonLabel": "VER SITIO",
+    "buttonUrl": "https://openfinances.vercel.app",
+    "buttonIcon": "arrow-right",
+    "repoUrl": "https://github.com/AlexJRQ32/OpenFinances",
+    "image": "/projects/openfinances.png"
+  },
+  {
     "id": "islavic",
     "code": "PRY 003",
     "status": "DESPLEGADO",
-    "title": "ISLAVIC Landing",
-    "number": "03",
-    "description": "Landing page corporativa para ISLAVIC construida con React 19 + Vite, con linting Oxlint y despliegue en Vercel. Trabajo real entregado a un cliente externo.",
+    "title": "ISLAVIC",
+    "number": 3,
+    "description": "Tienda en línea para un negocio en operación, construida con React 19 + Vite, con linting Oxlint y despliegue en Vercel.",
     "device": "monitor",
     "tagline": "LANDING // REACT + VITE",
-    "badges": ["REACT", "VITE", "VERCEL"],
+    "badges": [
+      "REACT",
+      "VITE",
+      "VERCEL"
+    ],
     "buttonLabel": "VER SITIO",
     "buttonUrl": "https://islavic-luxury-finds.vercel.app",
     "buttonIcon": "arrow-right",
@@ -52,11 +64,14 @@
     "code": "PRY 004",
     "status": "PROTOTIPO",
     "title": "Trustride",
-    "number": "04",
+    "number": 4,
     "description": "Monorepo de aplicación para encontrar paseadores de mascotas: prototipo de interfaz en React con enfoque en experiencia de usuario, desplegado en Vercel para prueba interactiva.",
     "device": "monitor",
     "tagline": "UI PROTOTIPO // REACT",
-    "badges": ["REACT", "FIGMA"],
+    "badges": [
+      "REACT",
+      "FIGMA"
+    ],
     "buttonLabel": "VER PROYECTO",
     "buttonUrl": "https://trustride-ui.vercel.app",
     "buttonIcon": "arrow-right",

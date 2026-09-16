@@ -186,10 +186,37 @@
     "titleLine2": "y Prototipos Arquitectónicos",
     "description": "Una selección de aplicaciones desplegadas en producción y prototipos de interfaz. Cada proyecto incluye su stack, estado de despliegue y evidencia de pruebas",
     "viewRepo": "VER REPO",
+    "viewCase": "VER CASO",
     "prevAria": "Proyecto anterior",
     "nextAria": "Proyecto siguiente",
     "dotsAria": "Proyectos",
     "viewProjectAria": "Ver proyecto"
+  },
+  "caseStudies": {
+    "backLink": "Volver a proyectos",
+    "problemLabel": "PROBLEMA",
+    "problemTitle": "Qué es y por qué existe",
+    "decisionsLabel": "DECISIONES TÉCNICAS",
+    "decisionsTitle": "Decisiones de diseño",
+    "decisions": [
+      { "title": "Ciclos calculados, nunca almacenados", "description": "Los rangos de fechas se computan en tiempo real a partir de la fecha actual, no se guardan en la base de datos. Esto simplifica el esquema y elimina inconsistencias." },
+      { "title": "day_of_month para alcance por quincena", "description": "Los ítems fijos usan day_of_month para determinar en qué quincena aplican: 1-15 solo en la 1ra, 16+ solo en la 2da, null aplica a todas." },
+      { "title": "Timezone por cookie del navegador", "description": "El cliente envía su offset en minutos via cookie. El servidor calcula rangos en la zona local del usuario, evitando desfaces UTC." },
+      { "title": "Aislamiento por usuario", "description": "Todos los datos están scoped al usuario autenticado. Los clientes nunca envían user IDs: la identidad viene de la sesión." }
+    ],
+    "stackLabel": "STACK TECNOLÓGICO",
+    "stackTitle": "Tecnologías",
+    "featuresLabel": "FEATURES CLAVE",
+    "featuresTitle": "Funcionalidades",
+    "featuresList": [
+      "Presupuestos quincenales (1ra/2da quincena) y vista mensual",
+      "Detección en vivo del ciclo activo (flips en medianoche local)",
+      "Auth: Google OAuth + email/contraseña con registro abierto",
+      "PWA instalable con UI dark glassmorphism, modals y toasts",
+      "Tipo de cambio BCCR en vivo, moneda CRC, interfaz en español"
+    ],
+    "viewSite": "VER SITIO",
+    "viewRepo": "VER REPO"
   },
   "header": {
     "navHome": "Inicio",

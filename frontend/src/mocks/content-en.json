@@ -5,7 +5,7 @@
       "title": "Scalable",
       "titleAccent": "Engineering",
       "titleSuffix": "of Solutions",
-      "description": "I'm Alex Roblero, a Systems Engineering student and self-taught full-stack developer. I don't sell promises: I build real software and leave it open for you to verify — production-deployed applications, 35 passing E2E tests, and professional workflow with Azure DevOps, Scrum, and PR reviews. Every project is evidence that I learn by building.",
+      "description": "I'm Alex Roblero, a Systems Engineering student and self-taught full-stack developer. I don't sell promises: I build real software and leave it open for you to verify: production-deployed applications, 35 passing E2E tests, and professional workflow with Azure DevOps, Scrum, and PR reviews. Every project is evidence that I learn by building.",
       "ctaPrimary": "VIEW PROJECTS",
       "ctaSecondary": "DOWNLOAD CV"
     },
@@ -186,10 +186,37 @@
     "titleLine2": "and Architectural Prototypes",
     "description": "A selection of production-deployed applications and interface prototypes. Each project includes its stack, deployment status and test evidence",
     "viewRepo": "VIEW REPO",
+    "viewCase": "VIEW CASE",
     "prevAria": "Previous project",
     "nextAria": "Next project",
     "dotsAria": "Projects",
     "viewProjectAria": "View project"
+  },
+  "caseStudies": {
+    "backLink": "Back to projects",
+    "problemLabel": "PROBLEM",
+    "problemTitle": "What it is and why it exists",
+    "decisionsLabel": "TECHNICAL DECISIONS",
+    "decisionsTitle": "Design decisions",
+    "decisions": [
+      { "title": "Computed cycles, never stored", "description": "Date ranges are computed in real-time from the current date, not saved to the database. This simplifies the schema and eliminates inconsistencies." },
+      { "title": "day_of_month for half-month scoping", "description": "Fixed items use day_of_month to determine which half-month they apply to: 1-15 only in the 1st half, 16+ only in the 2nd, null applies to all." },
+      { "title": "Timezone via browser cookie", "description": "The client sends its offset in minutes via cookie. The server computes ranges in the user's local time, avoiding UTC skew." },
+      { "title": "Per-user isolation", "description": "All data is scoped to the authenticated user. Clients never send user IDs: identity comes from the session." }
+    ],
+    "stackLabel": "TECH STACK",
+    "stackTitle": "Technologies",
+    "featuresLabel": "KEY FEATURES",
+    "featuresTitle": "Functionalities",
+    "featuresList": [
+      "Bi-weekly budgets (1st/2nd half) and monthly view",
+      "Live cycle detection (flips at midnight on day 1 and 16)",
+      "Auth: Google OAuth + email/password with open registration",
+      "Installable PWA with dark glassmorphism UI, modals and toasts",
+      "Live BCCR exchange rates, CRC currency, Spanish UI"
+    ],
+    "viewSite": "VIEW SITE",
+    "viewRepo": "VIEW REPO"
   },
   "header": {
     "navHome": "Home",

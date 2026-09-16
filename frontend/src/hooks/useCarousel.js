@@ -5,8 +5,8 @@ import { useState, useCallback, useEffect } from 'react'
  * @param {number} total - Número total de items
  * @returns {{ current, direction, total, goNext, goPrev, setCurrent }}
  */
-export function useCarousel(total) {
-  const [current, setCurrent] = useState(0)
+export function useCarousel(total, initialIndex = 0) {
+  const [current, setCurrent] = useState(initialIndex)
   const [direction, setDirection] = useState('next')
 
   const goNext = useCallback(() => {

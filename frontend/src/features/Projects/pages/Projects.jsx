@@ -1,4 +1,5 @@
 import './Projects.css'
+import { Link } from 'react-router-dom'
 import projects from '../../../mocks/info-projects.json'
 import { useLanguage } from '../../../context/LanguageContext'
 import { useCarousel } from '../../../hooks/useCarousel'
@@ -8,7 +9,16 @@ import DeviceFrame from '../components/DeviceFrame/DeviceFrame'
 function Projects() {
   const { t } = useLanguage()
   const p = t.projects
-  const { current, direction, total, goNext, goPrev, setCurrent } = useCarousel(projects.length)
+  // Restore carousel position when returning from a case study
+  const savedIndex = Number(sessionStorage.getItem('projects-carousel-index')) || 0
+  const { current, direction, total, goNext, goPrev, setCurrent } = useCarousel(
+    projects.length,
+    savedIndex < projects.length ? savedIndex : 0,
+  )
+
+  const handleViewCase = () => {
+    sessionStorage.setItem('projects-carousel-index', String(current))
+  }
 
   useLucideIcons([current])
 
@@ -114,6 +124,14 @@ function Projects() {
                   <i data-lucide="github" className="project-button-icon" />
                 </a>
               )}
+              <Link
+                to={`/projects/${project.id}`}
+                onClick={handleViewCase}
+                className="project-button project-button--case"
+              >
+                {p.viewCase || 'VER CASO'}
+                <i data-lucide="arrow-up-right" className="project-button-icon" />
+              </Link>
             </div>
 
             {/* Dot indicators */}

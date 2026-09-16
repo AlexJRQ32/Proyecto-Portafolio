@@ -1,0 +1,182 @@
+[
+  {
+    "id": "openfinances",
+    "slug": "openfinances",
+    "code": "PRY 001",
+    "title": "OpenFinances",
+    "status": "DEPLOYED",
+    "statusColor": "green",
+    "tagline": "FINANCE // NEXT.JS + SUPABASE",
+    "badges": ["NEXT.JS", "SUPABASE", "TYPESCRIPT", "PWA"],
+    "buttonUrl": "https://openfinances.vercel.app",
+    "buttonLabel": "VIEW SITE",
+    "repoUrl": "https://github.com/AlexJRQ32/OpenFinances",
+    "image": "/projects/openfinances.png",
+    "problem": "A personal finance app for managing bi-weekly and monthly budgets with fixed and variable income and expenses. Existing apps lacked real-time active cycle detection based on the user's timezone and an installable PWA with live BCCR exchange rates.",
+    "decisions": [
+      {
+        "title": "Computed cycles, never stored",
+        "description": "Date ranges (bi-weekly 1st/2nd half and monthly) are computed in real-time from the current date, not saved to the database. This simplifies the schema and eliminates inconsistencies."
+      },
+      {
+        "title": "day_of_month for half-month scoping",
+        "description": "Fixed items use day_of_month to determine which half-month they apply to: 1-15 only in the 1st half, 16+ only in the 2nd, null applies to all. In monthly mode all fixed items are included."
+      },
+      {
+        "title": "Timezone via browser cookie",
+        "description": "The client sends its offset in minutes via cookie (localTzOffsetMinutes). The server computes ranges in the user's local time, avoiding UTC skew."
+      },
+      {
+        "title": "Per-user isolation",
+        "description": "All data is scoped to the authenticated user. Clients never send user IDs: identity comes from the session (getCurrentUser in auth.ts)."
+      }
+    ],
+    "stack": [
+      { "layer": "Framework", "tech": "Next.js 16 (App Router, Server Actions, RSC)" },
+      { "layer": "Language", "tech": "TypeScript" },
+      { "layer": "Styling", "tech": "Tailwind CSS 4" },
+      { "layer": "Database", "tech": "PostgreSQL on Supabase" },
+      { "layer": "ORM", "tech": "Drizzle ORM" },
+      { "layer": "Auth", "tech": "Auth.js v5 (Google OAuth + credentials with scrypt, JWT sessions)" },
+      { "layer": "Hosting", "tech": "Vercel" },
+      { "layer": "Tests", "tech": "node:test via tsx (43 tests)" }
+    ],
+    "features": [
+      "Bi-weekly budgets (1st/2nd half) and monthly view",
+      "Fixed and variable income/expenses with half-month scoping",
+      "Live cycle detection (flips at midnight on day 1 and 16)",
+      "Auth: Google OAuth + email/password with open registration",
+      "Installable PWA with dark glassmorphism UI, modals and toasts",
+      "Live BCCR exchange rates, CRC currency, Spanish UI"
+    ]
+  },
+  {
+    "id": "openpaw",
+    "slug": "openpaw",
+    "code": "PRY 002",
+    "title": "OpenPaw",
+    "status": "DEPLOYED",
+    "statusColor": "green",
+    "tagline": "PET CARD // ASP.NET + REACT",
+    "badges": ["ASP.NET CORE", "REACT", "SQL SERVER", "AZURE DEVOPS"],
+    "buttonUrl": "https://openpaw-devs.vercel.app",
+    "buttonLabel": "VIEW SITE",
+    "repoUrl": "https://github.com/AlexJRQ32/OpenPaw",
+    "image": "/projects/openpaw.png",
+    "problem": "A veterinary platform with pet management, shareable digital clinical records, appointments, emergencies, inventory for pet stores, marketplace with cart, services, transfers, approvals, and registration for clinics and stores. The challenge was combining Google authentication, secure secret management, and team coordination with Azure DevOps.",
+    "decisions": [
+      {
+        "title": "JWT + Google Login",
+        "description": "Authentication via JWT for the API and Google Login for quick mobile access. The JWT token is validated on every backend request."
+      },
+      {
+        "title": "Secrets via env vars (fail-fast)",
+        "description": "No secrets in plaintext in the repo. ConnectionStrings, Jwt:Key and Google:ClientId env vars are mandatory: if any is missing, the API starts with an explicit InvalidOperationException."
+      },
+      {
+        "title": "Azure DevOps Boards",
+        "description": "Project management with work boards, reviewed PRs and feature branches. 2-week Scrum workflow with mandatory review."
+      }
+    ],
+    "stack": [
+      { "layer": "Backend", "tech": "ASP.NET Core Web API (C#)" },
+      { "layer": "Frontend", "tech": "React + Vite" },
+      { "layer": "Database", "tech": "SQL Server" },
+      { "layer": "DevOps", "tech": "Azure DevOps (Git + Boards)" }
+    ],
+    "features": [
+      "Pet management and shareable digital clinical records",
+      "Veterinary appointments and emergency records",
+      "Inventory for pet stores",
+      "Marketplace with shopping cart, services and transfers",
+      "Approval system and clinic/store registration",
+      "Dashboard and user profile",
+      "JWT + Google Login auth, secrets via env vars with fail-fast",
+      "Deployed on Somee/Vercel, managed with Azure DevOps"
+    ]
+  },
+  {
+    "id": "trustride",
+    "slug": "trustride",
+    "code": "PRY 004",
+    "title": "Trustride",
+    "status": "PROTOTYPE",
+    "statusColor": "gray",
+    "tagline": "UI PROTOTYPE // REACT",
+    "badges": ["REACT", "FIGMA", "VITE"],
+    "buttonUrl": "https://trustride-ui.vercel.app",
+    "buttonLabel": "VIEW PROJECT",
+    "repoUrl": "https://github.com/AlexJRQ32/Proyecto-Trustride",
+    "image": "/projects/trustride.png",
+    "problem": "A UI prototype for a pet walking app. The goal was to explore the user experience in mobile-first, defining the modular feature-based architecture before building the backend.",
+    "decisions": [
+      {
+        "title": "Modular feature-based architecture",
+        "description": "Each feature (search, profile, bookings) lives in its own folder with dedicated components, hooks, and styles. Enables independent development and testing."
+      },
+      {
+        "title": "Mobile-first, responsive web",
+        "description": "Design optimized for mobile first, with breakpoints that adapt the UI to desktop without breaking the touch experience."
+      },
+      {
+        "title": "Monorepo ready for backend",
+        "description": "Project structure prepared to integrate SQL Server + .NET Core Web API + React+Vite when the backend is defined."
+      }
+    ],
+    "stack": [
+      { "layer": "Frontend", "tech": "React + Vite" },
+      { "layer": "Design", "tech": "Figma" },
+      { "layer": "Deploy", "tech": "Vercel" },
+      { "layer": "State", "tech": "React State / Context" }
+    ],
+    "features": [
+      "UI prototype for pet walking app",
+      "Modular feature-based architecture",
+      "Mobile-first with responsive web",
+      "Structure prepared for backend (.NET + SQL Server)",
+      "Deployed on Vercel for interactive testing"
+    ]
+  },
+  {
+    "id": "islavic",
+    "slug": "islavic",
+    "code": "PRY 003",
+    "title": "ISLAVIC",
+    "status": "DEPLOYED",
+    "statusColor": "green",
+    "tagline": "E-COMMERCE // REACT + VITE",
+    "badges": ["REACT 19", "VITE", "VERCEL", "OXLINT"],
+    "buttonUrl": "https://islavic-luxury-finds.vercel.app",
+    "buttonLabel": "VIEW SITE",
+    "repoUrl": "https://github.com/AlexJRQ32/Islavic-Luxury-Finds",
+    "image": "/projects/islavic.png",
+    "problem": "Built for a business in operation, it is an online store with a product catalog. The challenge was delivering a polished interface with React 19, maintaining code quality with strict linting, and deploying quickly to production.",
+    "decisions": [
+      {
+        "title": "React 19 + Vite for build speed",
+        "description": "Vite offers instant HMR and optimized builds. React 19 allows using the latest Server Components and Streaming features."
+      },
+      {
+        "title": "Oxlint for strict linting",
+        "description": "Oxlint as the main linter for quality and consistency rules. Faster than ESLint on large projects."
+      },
+      {
+        "title": "Deploy on Vercel",
+        "description": "Automatic deploy on Vercel with preview per PR. No infrastructure configuration, the business sees the result in minutes."
+      }
+    ],
+    "stack": [
+      { "layer": "Framework", "tech": "React 19" },
+      { "layer": "Build", "tech": "Vite" },
+      { "layer": "Linter", "tech": "Oxlint" },
+      { "layer": "Deploy", "tech": "Vercel" }
+    ],
+    "features": [
+      "Online store with product catalog",
+      "React 19 with latest features",
+      "Strict linting with Oxlint",
+      "Automatic deploy on Vercel",
+      "In use by a real business"
+    ]
+  }
+]
