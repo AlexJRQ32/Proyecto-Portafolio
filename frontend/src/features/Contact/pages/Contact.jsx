@@ -43,7 +43,7 @@ function Contact() {
       {/* GRID 2 COLUMNAS */}
       <div className="contact-container">
         <div className="contact-grid">
-          {/* COLUMNA IZQUIERDA — FORMULARIO */}
+          {/* COLUMNA IZQUIERDA - FORMULARIO */}
           <div ref={formRef} className="contact-form-card reveal">
             <div className="contact-form-header">
               <span className="contact-form-label">{c.form.directMessage}</span>
@@ -139,7 +139,7 @@ function Contact() {
             </form>
           </div>
 
-          {/* COLUMNA DERECHA — EMAIL PREVIEW + CONECTAR */}
+          {/* COLUMNA DERECHA - EMAIL PREVIEW + CONECTAR */}
           <div ref={sidebarRef} className="contact-sidebar reveal reveal-delay-2">
             <EmailPreview
               emailPreview={c.emailPreview}
