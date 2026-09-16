@@ -49,15 +49,6 @@ export function useContactForm(t) {
     const tipoVal = e.target.tipo.value
     const mensajeVal = e.target.mensaje.value.trim()
 
-    const USE_MAILTO = false
-    if (USE_MAILTO || FORMSPREE_ENDPOINT.includes('TU_ID_AQUI')) {
-      const subject = encodeURIComponent(`[${tipoVal}] - ${nombreVal}`)
-      const body = encodeURIComponent(`${mensajeVal}\n\n---\n${nombreVal} | ${correoVal}`)
-      window.location.href = `mailto:robleroalex015@gmail.com?subject=${subject}&body=${body}`
-      showToast('success')
-      return
-    }
-
     setFormStatus('sending')
 
     try {
