@@ -270,6 +270,10 @@ h1{
     pointer-events: none;
   }
 
+  .rm-wrapper--expanded::after {
+    content: none;
+  }
+
   .rm-wrapper--expanded {
     max-height: none;
     overflow: visible;
