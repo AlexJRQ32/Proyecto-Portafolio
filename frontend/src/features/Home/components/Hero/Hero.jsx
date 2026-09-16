@@ -28,7 +28,8 @@ function Hero() {
         <div className="hero-content">
           <div className="hero-left">
             <h1 ref={titleRef} className='hero-title reveal reveal-delay-2' id='hero-title'>{t.home.hero.title} <span className='hero-title-accent'>{t.home.hero.titleAccent}</span> {t.home.hero.titleSuffix}</h1>
-            <div ref={descRef} className={`rm-wrapper rm-wrapper--collapsed reveal reveal-delay-3${expanded ? ' rm-wrapper--expanded' : ''}`}>
+            <div ref={descRef} className="reveal reveal-delay-3">
+            <div className={`rm-wrapper rm-wrapper--collapsed${expanded ? ' rm-wrapper--expanded' : ''}`}>
               <p className='hero-description'>
                 {t.home.hero.description}
               </p>
@@ -42,6 +43,7 @@ function Hero() {
               {expanded ? c.readLess : c.readMore}
               <i data-lucide="chevron-down" className="rm-toggle-icon" aria-hidden="true" />
             </button>
+            </div>
           </div>
         </div>
         <footer ref={actionsRef} className="hero-actions reveal reveal-delay-3">

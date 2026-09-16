@@ -37,10 +37,12 @@ function About() {
             {about.title} <span className="about-title-accent">{about.titleAccent}</span>{' '}
             {about.titleSuffix}
           </h1>
-          <div ref={descRef} className={`rm-wrapper rm-wrapper--collapsed reveal reveal-delay-3${descExpanded ? ' rm-wrapper--expanded' : ''}`}>
-            <p className="about-description">
-              {about.description}
-            </p>
+          <div ref={descRef} className="reveal reveal-delay-3">
+            <div className={`rm-wrapper rm-wrapper--collapsed${descExpanded ? ' rm-wrapper--expanded' : ''}`}>
+              <p className="about-description">
+                {about.description}
+              </p>
+            </div>
           </div>
           <button
             className={`rm-toggle${descExpanded ? ' rm-toggle--expanded' : ''}`}

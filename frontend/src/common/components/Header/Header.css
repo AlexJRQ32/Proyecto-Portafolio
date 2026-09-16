@@ -335,7 +335,7 @@
   }
 }
 
-/* On ≤768px, TabBar replaces all nav — keep only logo */
+/* On ≤768px, TabBar replaces all nav — keep logo + language toggle */
 @media (max-width: 768px) {
   .header-menu-toggle {
     display: none !important;
@@ -346,12 +346,21 @@
   }
 
   .header-actions {
-    display: none !important;
+    display: flex !important;
+  }
+
+  .header-actions .header-btn {
+    display: none;
   }
 
   .header-mobile-backdrop,
   .header-mobile-menu {
     display: none !important;
+  }
+
+  .header-lang-toggle {
+    min-width: 44px;
+    min-height: 44px;
   }
 }
 
