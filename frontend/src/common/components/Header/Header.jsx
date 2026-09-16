@@ -64,7 +64,7 @@ function Header() {
           <button
             className="header-lang-toggle"
             onClick={() => setLang(lang === 'es' ? 'en' : 'es')}
-            aria-label={h.ariaToggle}
+            aria-label={`${lang === 'es' ? 'ES' : 'EN'} - ${h.ariaToggle}`}
           >
             <i data-lucide="languages" className="header-lang-icon" aria-hidden="true"></i>
             <span className="header-lang-text">{lang === 'es' ? 'ES' : 'EN'}</span>
