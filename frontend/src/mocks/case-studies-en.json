@@ -1,4 +1,4 @@
-[
+﻿[
   {
     "id": "openfinances",
     "slug": "openfinances",
@@ -7,7 +7,12 @@
     "status": "DEPLOYED",
     "statusColor": "green",
     "tagline": "FINANCE // NEXT.JS + SUPABASE",
-    "badges": ["NEXT.JS", "SUPABASE", "TYPESCRIPT", "PWA"],
+    "badges": [
+      "NEXT.JS",
+      "SUPABASE",
+      "TYPESCRIPT",
+      "PWA"
+    ],
     "buttonUrl": "https://openfinances.vercel.app",
     "buttonLabel": "VIEW SITE",
     "repoUrl": "https://github.com/AlexJRQ32/OpenFinances",
@@ -32,14 +37,38 @@
       }
     ],
     "stack": [
-      { "layer": "Framework", "tech": "Next.js 16 (App Router, Server Actions, RSC)" },
-      { "layer": "Language", "tech": "TypeScript" },
-      { "layer": "Styling", "tech": "Tailwind CSS 4" },
-      { "layer": "Database", "tech": "PostgreSQL on Supabase" },
-      { "layer": "ORM", "tech": "Drizzle ORM" },
-      { "layer": "Auth", "tech": "Auth.js v5 (Google OAuth + credentials with scrypt, JWT sessions)" },
-      { "layer": "Hosting", "tech": "Vercel" },
-      { "layer": "Tests", "tech": "node:test via tsx (43 tests)" }
+      {
+        "layer": "Framework",
+        "tech": "Next.js 16 (App Router, Server Actions, RSC)"
+      },
+      {
+        "layer": "Language",
+        "tech": "TypeScript"
+      },
+      {
+        "layer": "Styling",
+        "tech": "Tailwind CSS 4"
+      },
+      {
+        "layer": "Database",
+        "tech": "PostgreSQL on Supabase"
+      },
+      {
+        "layer": "ORM",
+        "tech": "Drizzle ORM"
+      },
+      {
+        "layer": "Auth",
+        "tech": "Auth.js v5 (Google OAuth + credentials with scrypt, JWT sessions)"
+      },
+      {
+        "layer": "Hosting",
+        "tech": "Vercel"
+      },
+      {
+        "layer": "Tests",
+        "tech": "node:test via tsx (43 tests)"
+      }
     ],
     "features": [
       "Bi-weekly budgets (1st/2nd half) and monthly view",
@@ -58,7 +87,12 @@
     "status": "DEPLOYED",
     "statusColor": "green",
     "tagline": "PET CARD // ASP.NET + REACT",
-    "badges": ["ASP.NET CORE", "REACT", "SQL SERVER", "AZURE DEVOPS"],
+    "badges": [
+      "ASP.NET CORE",
+      "REACT",
+      "SQL SERVER",
+      "AZURE DEVOPS"
+    ],
     "buttonUrl": "https://openpaw-devs.vercel.app",
     "buttonLabel": "VIEW SITE",
     "repoUrl": "https://github.com/AlexJRQ32/OpenPaw",
@@ -79,10 +113,22 @@
       }
     ],
     "stack": [
-      { "layer": "Backend", "tech": "ASP.NET Core Web API (C#)" },
-      { "layer": "Frontend", "tech": "React + Vite" },
-      { "layer": "Database", "tech": "SQL Server" },
-      { "layer": "DevOps", "tech": "Azure DevOps (Git + Boards)" }
+      {
+        "layer": "Backend",
+        "tech": "ASP.NET Core Web API (C#)"
+      },
+      {
+        "layer": "Frontend",
+        "tech": "React + Vite"
+      },
+      {
+        "layer": "Database",
+        "tech": "SQL Server"
+      },
+      {
+        "layer": "DevOps",
+        "tech": "Azure DevOps (Git + Boards)"
+      }
     ],
     "features": [
       "Pet management and shareable digital clinical records",
@@ -103,7 +149,11 @@
     "status": "PROTOTYPE",
     "statusColor": "gray",
     "tagline": "UI PROTOTYPE // REACT",
-    "badges": ["REACT", "FIGMA", "VITE"],
+    "badges": [
+      "REACT",
+      "FIGMA",
+      "VITE"
+    ],
     "buttonUrl": "https://trustride-ui.vercel.app",
     "buttonLabel": "VIEW PROJECT",
     "repoUrl": "https://github.com/AlexJRQ32/Proyecto-Trustride",
@@ -124,10 +174,22 @@
       }
     ],
     "stack": [
-      { "layer": "Frontend", "tech": "React + Vite" },
-      { "layer": "Design", "tech": "Figma" },
-      { "layer": "Deploy", "tech": "Vercel" },
-      { "layer": "State", "tech": "React State / Context" }
+      {
+        "layer": "Frontend",
+        "tech": "React + Vite"
+      },
+      {
+        "layer": "Design",
+        "tech": "Figma"
+      },
+      {
+        "layer": "Deploy",
+        "tech": "Vercel"
+      },
+      {
+        "layer": "State",
+        "tech": "React State / Context"
+      }
     ],
     "features": [
       "UI prototype for pet walking app",
@@ -145,7 +207,12 @@
     "status": "DEPLOYED",
     "statusColor": "green",
     "tagline": "E-COMMERCE // REACT + VITE",
-    "badges": ["REACT 19", "VITE", "VERCEL", "OXLINT"],
+    "badges": [
+      "REACT 19",
+      "VITE",
+      "VERCEL",
+      "OXLINT"
+    ],
     "buttonUrl": "https://islavic-luxury-finds.vercel.app",
     "buttonLabel": "VIEW SITE",
     "repoUrl": "https://github.com/AlexJRQ32/Islavic-Luxury-Finds",
@@ -166,10 +233,22 @@
       }
     ],
     "stack": [
-      { "layer": "Framework", "tech": "React 19" },
-      { "layer": "Build", "tech": "Vite" },
-      { "layer": "Linter", "tech": "Oxlint" },
-      { "layer": "Deploy", "tech": "Vercel" }
+      {
+        "layer": "Framework",
+        "tech": "React 19"
+      },
+      {
+        "layer": "Build",
+        "tech": "Vite"
+      },
+      {
+        "layer": "Linter",
+        "tech": "Oxlint"
+      },
+      {
+        "layer": "Deploy",
+        "tech": "Vercel"
+      }
     ],
     "features": [
       "Online store with product catalog",
@@ -177,6 +256,74 @@
       "Strict linting with Oxlint",
       "Automatic deploy on Vercel",
       "In use by a real business"
+    ]
+  },
+  {
+    "id": "flowbank",
+    "slug": "flowbank",
+    "code": "PRY 005",
+    "title": "FlowBank",
+    "status": "DEPLOYED",
+    "statusColor": "green",
+    "tagline": "CREDIT CARDS // NEXT.JS + SUPABASE",
+    "badges": [
+      "NEXT.JS 16",
+      "SUPABASE",
+      "PLAYWRIGHT",
+      "VERCEL"
+    ],
+    "buttonUrl": "https://flowbank-phi.vercel.app",
+    "buttonLabel": "VIEW SITE",
+    "repoUrl": "https://github.com/AlexJRQ32/FlowBank",
+    "image": "/projects/flowbank.png",
+    "problem": "Checking each bank app for due dates and payment dates is a chore. FlowBank brings the cutoff, payment date, available limit and invoices of all your credit cards into a single panel, unifying debts in colones and dollars.",
+    "decisions": [
+      {
+        "title": "Next.js 16 App Router + React 19",
+        "description": "One framework for landing and dashboard: (public) and (app) routes, SCSS Modules and optimized rendering on Vercel."
+      },
+      {
+        "title": "Supabase as full backend",
+        "description": "Postgres with per-user RLS, Auth and Storage. 9 versioned SQL migrations as the authoritative schema source."
+      },
+      {
+        "title": "35 E2E tests with Playwright",
+        "description": "Full end-to-end suite over critical flows: auth, cards, invoices and payments. If it is not tested, it is not ready."
+      },
+      {
+        "title": "Live BCCR exchange rate",
+        "description": "Dollar debts convert to colones using the real BCCR rate, cached server-side to respect API limits."
+      }
+    ],
+    "stack": [
+      {
+        "layer": "Frontend",
+        "tech": "Next.js 16 + React 19"
+      },
+      {
+        "layer": "Backend",
+        "tech": "Supabase (Postgres + Auth + RLS)"
+      },
+      {
+        "layer": "Testing",
+        "tech": "Playwright E2E (35 tests)"
+      },
+      {
+        "layer": "External data",
+        "tech": "BCCR exchange rate API"
+      },
+      {
+        "layer": "Deploy",
+        "tech": "Vercel"
+      }
+    ],
+    "features": [
+      "Single panel for all credit cards",
+      "Cutoff and payment dates per card and bank",
+      "Colon and dollar debts with live BCCR conversion",
+      "Available limit and invoices per card",
+      "Supabase auth with per-user RLS",
+      "35 E2E tests with Playwright"
     ]
   }
 ]

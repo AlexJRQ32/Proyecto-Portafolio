@@ -1,4 +1,4 @@
-[
+﻿[
   {
     "id": "openpaw",
     "code": "PRY 001",
@@ -77,5 +77,25 @@
     "buttonIcon": "arrow-right",
     "repoUrl": "https://github.com/AlexJRQ32/Proyecto-Trustride",
     "image": "/projects/trustride.png"
+  },
+  {
+    "id": "flowbank",
+    "code": "PRY 005",
+    "status": "DESPLEGADO",
+    "title": "FlowBank",
+    "number": 5,
+    "description": "App web para administrar fechas de corte y pago de tarjetas de credito de todos los bancos en un solo panel: Next.js 16 + Supabase (Postgres, Auth, RLS), 35 tests E2E con Playwright y despliegue en Vercel.",
+    "device": "monitor",
+    "tagline": "TARJETAS // NEXT.JS + SUPABASE",
+    "badges": [
+      "NEXT.JS",
+      "SUPABASE",
+      "PLAYWRIGHT"
+    ],
+    "buttonLabel": "VER PROYECTO",
+    "buttonUrl": "https://flowbank-phi.vercel.app",
+    "buttonIcon": "arrow-right",
+    "repoUrl": "https://github.com/AlexJRQ32/FlowBank",
+    "image": "/projects/flowbank.png"
   }
 ]
