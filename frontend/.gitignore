@@ -25,3 +25,4 @@ dist-ssr
 
 screenshot_*.png
 test-results/
+.vercel
