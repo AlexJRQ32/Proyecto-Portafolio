@@ -53,4 +53,8 @@
     transition: none;
     transform: none;
   }
+}.btn-orange, .btn-grey {
+  transition: background-color var(--transition-fast), border-color var(--transition-fast), color var(--transition-fast);
 }
+.btn-grey { background-color: transparent; }
+.btn-orange:hover, .btn-grey:hover { transform: none; }

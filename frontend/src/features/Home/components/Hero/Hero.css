@@ -142,3 +142,49 @@
     padding-top: 16px;
   }
 }
+/* Keep the introduction aligned with the rest of the page. */
+.hero-section {
+  min-height: 0;
+  padding: clamp(72px, 10vw, 140px) 0;
+  background-image: none;
+}
+
+.hero-section::before {
+  display: none;
+}
+
+.hero-container {
+  max-width: calc(var(--container-max) + 128px);
+  margin-inline: auto;
+}
+
+.hero-badge {
+  padding: 0;
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.hero-title {
+  font-size: clamp(2.6rem, 6vw, 4.75rem);
+  font-weight: 600;
+  letter-spacing: -0.05em;
+  line-height: 1.08;
+}
+
+.hero-description {
+  font-size: 1.125rem;
+  max-width: 56ch;
+}
+
+.hero-actions {
+  gap: 12px;
+  padding-top: 16px;
+}
+
+@media (max-width: 768px) {
+  .hero-section { padding: 72px 0; }
+  .hero-title { font-size: clamp(2.5rem, 10vw, 3.5rem); }
+  .hero-description { font-size: 1rem; }
+}

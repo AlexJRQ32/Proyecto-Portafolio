@@ -332,3 +332,31 @@ h1{
     transition: none;
   }
 }
+/* Visual refinements shared across the portfolio. */
+:root {
+  --text-primary: #ddd0c5;
+  --text-muted: #c0b1a4;
+  --border-color: #37393b;
+}
+
+body :where(div, main, section, article, aside, header, footer, nav, ul, ol, li, h1, h2, h3, h4, h5, h6, p, span, strong, small, label) {
+  cursor: auto;
+}
+
+.section-container {
+  max-width: calc(var(--container-max) + 128px);
+  margin-inline: auto;
+}
+
+.section-title {
+  font-family: var(--font-heading);
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 600;
+  letter-spacing: -0.035em;
+}
+
+.section-label {
+  font-family: var(--font-code);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
