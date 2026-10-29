@@ -188,3 +188,23 @@
   .hero-title { font-size: clamp(2.5rem, 10vw, 3.5rem); }
   .hero-description { font-size: 1rem; }
 }
+/* Fit the introduction below the fixed navigation while allowing content to grow. */
+.hero-section {
+  min-height: calc(100svh - 50px);
+  display: flex;
+  align-items: center;
+  padding-block: 48px;
+}
+
+.hero-container {
+  width: 100%;
+  height: auto;
+  gap: clamp(20px, 3vh, 32px);
+}
+
+@media (max-width: 768px) {
+  .hero-section {
+    min-height: calc(100svh - 134px - env(safe-area-inset-top) - env(safe-area-inset-bottom));
+    padding-block: 32px;
+  }
+}
