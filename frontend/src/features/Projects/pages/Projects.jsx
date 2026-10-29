@@ -91,7 +91,7 @@ function Projects() {
               <span className="project-meta">
                 <span
                   className={`project-dot ${
-                    project.status === 'PROTOTIPO' ? 'project-dot--gray' : ''
+                    project.status === 'EN DESARROLLO' ? 'project-dot--gray' : ''
                   }`}
                   aria-hidden="true"
                 />

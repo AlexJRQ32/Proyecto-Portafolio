@@ -146,7 +146,7 @@
     "slug": "trustride",
     "code": "PRY 004",
     "title": "Trustride",
-    "status": "PROTOTIPO",
+    "status": "EN DESARROLLO",
     "statusColor": "gray",
     "tagline": "UI PROTOTIPO // REACT",
     "badges": [
@@ -158,7 +158,7 @@
     "buttonLabel": "VER PROYECTO",
     "repoUrl": "https://github.com/AlexJRQ32/Proyecto-Trustride",
     "image": "/projects/trustride.png",
-    "problem": "Prototipo de interfaz para una app de paseo de mascotas. El objetivo era explorar la experiencia de usuario en mobile-first, definiendo la arquitectura modular por features antes de construir el backend.",
+    "problem": "TrustRide es un proyecto en desarrollo y aún no está terminado. El prototipo de interfaz explora la experiencia de una app de paseo de mascotas con un enfoque mobile-first, antes de construir el backend.",
     "decisions": [
       {
         "title": "Arquitectura modular por features",
@@ -215,7 +215,7 @@
     ],
     "buttonUrl": "https://islavic-luxury-finds.vercel.app",
     "buttonLabel": "VER SITIO",
-    "repoUrl": "https://github.com/AlexJRQ32/Islavic-Luxury-Finds",
+    "repoUrl": "https://github.com/AlexJRQ32/Landing-Page-ISLAVIC",
     "image": "/projects/islavic.png",
     "problem": "Desarrollada para un negocio en operación, es una tienda en línea con catálogo de productos. El reto era entregar una interfaz pulida con React 19, mantener calidad de código con linting estricto y desplegar rápidamente en producción.",
     "decisions": [

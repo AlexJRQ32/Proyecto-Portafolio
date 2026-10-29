@@ -56,16 +56,16 @@
     "buttonLabel": "VER SITIO",
     "buttonUrl": "https://islavic-luxury-finds.vercel.app",
     "buttonIcon": "arrow-right",
-    "repoUrl": "https://github.com/AlexJRQ32/Islavic-Luxury-Finds",
+    "repoUrl": "https://github.com/AlexJRQ32/Landing-Page-ISLAVIC",
     "image": "/projects/islavic.png"
   },
   {
     "id": "trustride",
     "code": "PRY 004",
-    "status": "PROTOTIPO",
+    "status": "EN DESARROLLO",
     "title": "Trustride",
     "number": 4,
-    "description": "Monorepo de aplicación para encontrar paseadores de mascotas: prototipo de interfaz en React con enfoque en experiencia de usuario, desplegado en Vercel para prueba interactiva.",
+    "description": "Proyecto en desarrollo para encontrar paseadores de mascotas. Aún no está terminado; el enlace muestra un prototipo interactivo de la interfaz en React.",
     "device": "monitor",
     "tagline": "UI PROTOTIPO // REACT",
     "badges": [
